@@ -508,7 +508,7 @@ dt {
 th {
   font-weight: bold;
 }
-li {
+li:not(.nav-item) {
   margin-bottom: calc(1.45rem / 2);
 }
 ol li {
