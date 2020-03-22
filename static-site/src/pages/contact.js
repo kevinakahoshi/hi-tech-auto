@@ -4,13 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const Contact = () => (
   <Layout>
-    <SEO title="About" />
-    <h1>Hi from the About page</h1>
-    <p>Welcome to About</p>
+    <SEO title="Contact" />
+    <h1>Hi from the Contact page</h1>
+    <p>Welcome to Contact</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default SecondPage
+export default Contact
