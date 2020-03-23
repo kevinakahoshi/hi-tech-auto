@@ -28,20 +28,26 @@ const Header = ({ siteTitle }) => {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link
-                  to="/about/">About</Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to="/services/"
-                  className="ml-3">Services</Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to="/contact/"
-                  className="ml-3">Contact</Link>
-              </NavItem>
+              <Link
+                to="/about/">
+                  <NavItem>
+                    About
+                  </NavItem>
+              </Link>
+              <Link
+                to="/services/">
+                <NavItem
+                  className="ml-md-3">
+                    Services
+                </NavItem>
+              </Link>
+              <Link
+                to="/contact/">
+                <NavItem
+                  className="ml-md-3">
+                    Contact
+                </NavItem>
+              </Link>
             </Nav>
           </Collapse>
       </Navbar>
