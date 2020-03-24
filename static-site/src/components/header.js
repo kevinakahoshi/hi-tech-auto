@@ -18,16 +18,25 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      <Navbar color="light" light expand="md">
+      <Navbar
+        className = "shadow-lg"
+        color="white"
+        light
+        expand="md">
           <NavbarBrand>
             <Link
               to="/">
               {siteTitle}
             </Link>
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+          <NavbarToggler
+            onClick={toggle} />
+          <Collapse
+            isOpen={isOpen}
+            navbar>
+            <Nav
+              className="ml-auto"
+              navbar>
               <Link
                 to="/about/">
                   <NavItem>
