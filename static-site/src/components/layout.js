@@ -8,6 +8,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap';
 
 import Header from "./header";
 import "./layout.css";
@@ -30,8 +35,17 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
-      <footer>
-        © {new Date().getFullYear()}
+      <footer
+        className="bg-light py-5">
+        <Container>
+          <Row>
+            <Col
+              xs={12}>
+                <p
+                  className="text-center mb-0">Hi-Tech Auto © {new Date().getFullYear()}</p>
+              </Col>
+          </Row>
+        </Container>
       </footer>
     </>
   )

@@ -5,7 +5,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem
 } from 'reactstrap';
@@ -23,12 +22,10 @@ const Header = ({ siteTitle }) => {
         color="white"
         light
         expand="md">
-          <NavbarBrand>
-            <Link
-              to="/">
-              {siteTitle}
-            </Link>
-          </NavbarBrand>
+          <Link
+            to="/">
+            {siteTitle}
+          </Link>
           <NavbarToggler
             onClick={toggle} />
           <Collapse
