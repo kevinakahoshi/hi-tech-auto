@@ -7,7 +7,7 @@ import Img from "gatsby-image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
-import Tools from "../components/image"
+import Images from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -16,7 +16,7 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <Tools />
+    {Images[0]}
   </Layout>
 )
 
