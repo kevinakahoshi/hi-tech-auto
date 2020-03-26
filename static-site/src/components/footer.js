@@ -11,9 +11,35 @@ const Footer = () => (
     <Container>
       <Row>
         <Col
+          lg={4}
+          sm={6}
+          xs={12}>
+            <div style={{'height':'300px'}}
+              className="bg-dark">
+            </div>
+          </Col>
+          <Col
+          lg={4}
+          sm={6}
+          xs={12}>
+            <div style={{'height':'300px'}}
+              className="bg-dark">
+            </div>
+          </Col>
+          <Col
+          lg={4}
+          sm={6}
+          xs={12}>
+            <div style={{'height':'300px'}}
+              className="bg-dark">
+            </div>
+          </Col>
+        <Col
           xs={12}>
             <p
-              className="text-center mb-0">Hi-Tech Auto © {new Date().getFullYear()}</p>
+              className="text-center mb-0">
+                Hi-Tech Auto © {new Date().getFullYear()}
+            </p>
           </Col>
       </Row>
     </Container>
