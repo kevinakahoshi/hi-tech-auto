@@ -117,57 +117,7 @@ const IndexPage = () => (
                 </CardBody>
               </Card>
             </Col>
-        </Row>
-        {/* <Row
-          className="row-cols-1 row-cols-sm-2 row-cols-md-3 mb-4">
-          <Col>
-            <Card
-              className="border rounded bg-white shadow-lg h-100">
-              <CardBody>
-                <CardTitle>
-                  <h3>
-                    Oil Changes
-                  </h3>
-                </CardTitle>
-                <CardText>
-                  Ultrices dui sapien eget mi proin sed libero enim.Senectus et netus et malesuada fames.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card
-              className="border rounded bg-white shadow-lg h-100">
-              <CardBody>
-                <CardTitle>
-                  <h3>
-                    Tire Rotations
-                  </h3>
-                </CardTitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col>
-            <Card
-              className="border rounded bg-white shadow-lg h-100">
-              <CardBody>
-                <CardTitle>
-                  <h3>
-                    Alignment
-                  </h3>
-                </CardTitle>
-                <CardText>
-                  At tellus at urna condimentum mattis pellentesque id nibh.
-                </CardText>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row> */}
-        <Row>
-          <Col
+            <Col
             xs={12}>
               <Link
               className="btn btn-primary"
