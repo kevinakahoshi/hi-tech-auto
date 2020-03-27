@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  Link
-  // useStaticQuery,
-  // graphql
+  Link,
+  useStaticQuery,
+  graphql
 } from "gatsby"
-// import Img from "gatsby-image";
+import Img from "gatsby-image";
 import {
   Container,
   Row,
@@ -13,8 +13,7 @@ import {
   CardText,
   CardBody,
   // CardFooter,
-  CardTitle,
-  CardDeck
+  CardTitle
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -67,6 +66,7 @@ const IndexPage = () => (
             sm={12}>
               <Card
                 className="border rounded bg-white shadow-lg h-100">
+                <Image />
                 <CardBody>
                   <CardTitle>
                     <h3>
@@ -86,6 +86,7 @@ const IndexPage = () => (
             sm={12}>
               <Card
                 className="border rounded bg-white shadow-lg h-100">
+                <Image />
                 <CardBody>
                   <CardTitle>
                     <h3>
@@ -105,6 +106,7 @@ const IndexPage = () => (
               sm={12}>
               <Card
                 className="border rounded bg-white shadow-lg h-100">
+                <Image />
                 <CardBody>
                   <CardTitle>
                     <h3>
@@ -131,23 +133,24 @@ const IndexPage = () => (
   </Layout>
 )
 
-// const Image = () => {
-//   const data = useStaticQuery(graphql `
-//     query {
-//       placeholderImage: file(relativePath: { eq: "tools.jpg" }) {
-//         childImageSharp {
-//           fluid(maxWidth: 1920) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   `)
+const Image = () => {
+  const data = useStaticQuery(graphql `
+    query {
+      placeholderImage: file(relativePath: { eq: "tools.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-//   return <Img fluid = {
-//     data.placeholderImage.childImageSharp.fluid
-//   }
-//   />
-// }
+  return (
+  <Img
+    className="rounded-top"
+    fluid={data.placeholderImage.childImageSharp.fluid} />
+  )
+}
 
 export default IndexPage
