@@ -148,7 +148,7 @@ const Image = () => {
 
   return (
   <Img
-    className="rounded-top"
+    className="rounded-top image-angle"
     fluid={data.placeholderImage.childImageSharp.fluid} />
   )
 }
