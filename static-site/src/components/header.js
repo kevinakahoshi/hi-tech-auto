@@ -16,9 +16,10 @@ const Header = ({ siteTitle }) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <header>
+    <header
+      className="sticky-top">
       <Navbar
-        className = "shadow-lg"
+        className="shadow-lg"
         color="white"
         light
         expand="md">
