@@ -85,7 +85,7 @@ const IndexPage = () => (
             md={6}
             sm={12}>
               <Card
-                className="border rounded bg-white shadow-lg h-100">
+                className="border rounded bg-white shadow-lg h-100 five-hover">
                 <Image />
                 <CardBody>
                   <CardTitle>
@@ -105,7 +105,7 @@ const IndexPage = () => (
               md={6}
               sm={12}>
               <Card
-                className="border rounded bg-white shadow-lg h-100">
+                className="border rounded bg-white shadow-lg h-100 five-hover">
                 <Image />
                 <CardBody>
                   <CardTitle>

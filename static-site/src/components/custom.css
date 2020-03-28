@@ -1,3 +1,11 @@
 .image-angle {
   clip-path: polygon(0 0, 100% 0, 100% 100%, -50% 70%);
 }
+
+.card {
+  transition: .3s all;
+}
+
+.card:hover {
+  transform: translateY(-.5rem);
+}
