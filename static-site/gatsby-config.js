@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Hi-Tech Auto Service`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Hi-Tech Auto`,
+    description: `Hi-Tech Auto | General Automotive Repair and Maintenance in El Monte, CA`,
+    author: `Hi-Tech Auto`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
