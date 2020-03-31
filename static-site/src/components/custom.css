@@ -1,3 +1,7 @@
+.hero-banner {
+  min-height: 75vh;
+}
+
 .image-angle {
   clip-path: polygon(0 0, 100% 0, 100% 100%, -50% 70%);
 }

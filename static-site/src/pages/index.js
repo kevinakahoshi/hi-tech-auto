@@ -4,6 +4,7 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby"
+import BackgroundImage from 'gatsby-background-image';
 import Img from "gatsby-image";
 import {
   Container,
@@ -12,145 +13,187 @@ import {
   Card,
   CardText,
   CardBody,
-  // CardFooter,
   CardTitle
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
+import FluidImage from '../components/fluid-image'
 // import Images from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      title="Home" />
-    {/* <Images /> */}
-    <div
-      className="bg-white">
-      <Container
-        className="py-5">
-        <Row>
-          <Col
-            xs={12}>
-              <h1>
-                About Hi-Tech Auto
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh tortor id aliquet lectus. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.
-              </p>
-              <Link
-                className="btn btn-primary"
-                to="/about/">
-                  Our Mission
-              </Link>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-    <div
-      className="bg-light">
-      <Container
-        className="py-5">
-        <Row>
-          <Col
-            xs={12}>
-            <h1>
-              Our Services
-            </h1>
-          </Col>
-          <Col
-            className="mb-3"
-            lg={4}
-            md={6}
-            sm={12}>
-              <Card
-                className="border rounded bg-white h-100">
-                <Image />
-                <CardBody>
-                  <CardTitle>
-                    <h3>
-                      Oil Changes
-                    </h3>
-                  </CardTitle>
-                  <CardText>
-                    Ultrices dui sapien eget mi proin sed libero enim.Senectus et netus et malesuada fames.
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
+const IndexPage = () => {
+  const imageData = useStaticQuery(graphql`
+    query AllImages {
+      allFile {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1920, maxHeight: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log(imageData.allFile.nodes[1].childImageSharp.fluid);
+
+  return (
+    <Layout>
+      <SEO
+        title="Home" />
+      <BackgroundImage
+        Tag="div"
+        className="d-flex hero-banner"
+        fluid={imageData.allFile.nodes[2].childImageSharp.fluid}
+        backgroundColor={`#040e18`} >
+          <Container
+            className="py-5 m-auto">
+            <Row
+              className="align-items-center">
+              <Col
+                xs={12}>
+                <div
+                  className="m-auto">
+                  <h1
+                    className="text-center text-white">
+                      Hi-Tech Auto
+                  </h1>
+                  <h2
+                    className="text-center text-white">
+                      General Automotive Repair and Service in El Monte, CA
+                  </h2>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+      </BackgroundImage>
+      <div
+        className="bg-white">
+        <Container
+          className="py-5">
+          <Row>
             <Col
-              className="mb-3"
-            lg={4}
-            md={6}
-            sm={12}>
-              <Card
-                className="border rounded bg-white h-100 five-hover">
-                <Image />
-                <CardBody>
-                  <CardTitle>
-                    <h3>
-                      Tire Rotations
-                    </h3>
-                  </CardTitle>
-                  <CardText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </CardText>
-                </CardBody>
-              </Card>
+              xs={12}>
+                <h1>
+                  About Hi-Tech Auto
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh tortor id aliquet lectus. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.
+                </p>
+                <Link
+                  className="btn btn-primary"
+                  to="/about/">
+                    Our Mission
+                </Link>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div
+        className="bg-light">
+        <Container
+          className="py-5">
+          <Row>
+            <Col
+              xs={12}>
+              <h1>
+                Our Services
+              </h1>
             </Col>
             <Col
               className="mb-3"
               lg={4}
               md={6}
               sm={12}>
-              <Card
-                className="border rounded bg-white h-100 five-hover">
-                <Image />
-                <CardBody>
-                  <CardTitle>
-                    <h3>
-                      Alignment
-                    </h3>
-                  </CardTitle>
-                  <CardText>
-                    At tellus at urna condimentum mattis pellentesque id nibh.
-                  </CardText>
-                </CardBody>
-              </Card>
+                <Card
+                  className="border rounded bg-white h-100">
+                  {/* <Image /> */}
+                  <CardBody>
+                    <CardTitle>
+                      <h3>
+                        Oil Changes
+                      </h3>
+                    </CardTitle>
+                    <CardText>
+                      Ultrices dui sapien eget mi proin sed libero enim.Senectus et netus et malesuada fames.
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col
+                className="mb-3"
+              lg={4}
+              md={6}
+              sm={12}>
+                <Card
+                  className="border rounded bg-white h-100 five-hover">
+                  {/* <Image /> */}
+                  <CardBody>
+                    <CardTitle>
+                      <h3>
+                        Tire Rotations
+                      </h3>
+                    </CardTitle>
+                    <CardText>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col
+                className="mb-3"
+                lg={4}
+                md={6}
+                sm={12}>
+                <Card
+                  className="border rounded bg-white h-100 five-hover">
+                  {/* <Image /> */}
+                  <CardBody>
+                    <CardTitle>
+                      <h3>
+                        Alignment
+                      </h3>
+                    </CardTitle>
+                    <CardText>
+                      At tellus at urna condimentum mattis pellentesque id nibh.
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </Col>
+              <Col
+              xs={12}>
+                <Link
+                className="btn btn-primary"
+                to="/services/">
+                  See All Services
+              </Link>
             </Col>
-            <Col
-            xs={12}>
-              <Link
-              className="btn btn-primary"
-              to="/services/">
-                See All Services
-            </Link>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  </Layout>
-)
+          </Row>
+        </Container>
+      </div>
+    </Layout>
+)};
 
-const Image = () => {
-  const data = useStaticQuery(graphql `
-    query {
-      placeholderImage: file(relativePath: { eq: "tools.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+// const Image = () => {
+//   const data = useStaticQuery(graphql `
+//     query {
+//       placeholderImage: file(relativePath: { eq: "tools.jpg" }) {
+//         childImageSharp {
+//           fluid(maxWidth: 1920) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  return (
-  <Img
-    className="rounded-top image-angle"
-    fluid={data.placeholderImage.childImageSharp.fluid} />
-  )
-}
+//   return (
+//   <Img
+//     className="rounded-top image-angle"
+//     fluid={data.placeholderImage.childImageSharp.fluid} />
+//   )
+// }
 
 export default IndexPage
