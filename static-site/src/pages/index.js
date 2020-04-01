@@ -19,7 +19,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
 import FluidImage from '../components/fluid-image'
-// import Images from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -28,7 +27,7 @@ const IndexPage = () => {
       allFile {
         nodes {
           childImageSharp {
-            fluid(maxWidth: 1920, maxHeight: 1000) {
+            fluid(maxWidth: 1920,) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -37,17 +36,15 @@ const IndexPage = () => {
     }
   `);
 
-  console.log(imageData.allFile.nodes[1].childImageSharp.fluid);
-
   return (
     <Layout>
       <SEO
         title="Home" />
       <BackgroundImage
+        fadeIn={true}
         Tag="div"
-        className="d-flex hero-banner"
-        fluid={imageData.allFile.nodes[2].childImageSharp.fluid}
-        backgroundColor={`#040e18`} >
+        className="d-flex position-relative hero-banner"
+        fluid={imageData.allFile.nodes[2].childImageSharp.fluid} >
           <Container
             className="py-5 m-auto">
             <Row
@@ -68,8 +65,25 @@ const IndexPage = () => {
               </Col>
             </Row>
           </Container>
+          <div
+            className="position-absolute d-flex w-100 down-scroll-container">
+            <div
+              className="m-auto text-white">
+              <svg className="bi bi-chevron-compact-down down-scroll-arrow"
+                width="2rem"
+                height="2rem"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fillRule="evenodd"
+                    d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z"
+                    clipRule="evenodd"/>
+              </svg>
+            </div>
+          </div>
       </BackgroundImage>
-      <div
+      <section
         className="bg-white">
         <Container
           className="py-5">
@@ -90,8 +104,8 @@ const IndexPage = () => {
             </Col>
           </Row>
         </Container>
-      </div>
-      <div
+      </section>
+      <section
         className="bg-light">
         <Container
           className="py-5">
@@ -109,7 +123,9 @@ const IndexPage = () => {
               sm={12}>
                 <Card
                   className="border rounded bg-white h-100">
-                  {/* <Image /> */}
+                  <Img
+                    className="rounded-top image-angle"
+                    fluid={imageData.allFile.nodes[3].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -129,7 +145,9 @@ const IndexPage = () => {
               sm={12}>
                 <Card
                   className="border rounded bg-white h-100 five-hover">
-                  {/* <Image /> */}
+                  <Img
+                    className="rounded-top image-angle"
+                    fluid={imageData.allFile.nodes[4].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -149,7 +167,9 @@ const IndexPage = () => {
                 sm={12}>
                 <Card
                   className="border rounded bg-white h-100 five-hover">
-                  {/* <Image /> */}
+                  <Img
+                    className="rounded-top image-angle"
+                    fluid={imageData.allFile.nodes[5].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -172,7 +192,18 @@ const IndexPage = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
+      <section
+        className="bg-white">
+        <Container
+          fluid>
+          <Row>
+            <Col
+              xs={12}>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </Layout>
 )};
 
