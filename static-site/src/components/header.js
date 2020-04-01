@@ -2,11 +2,14 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import {
+  Container,
+  Row,
   Collapse,
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem
+  NavItem,
+  Col
 } from 'reactstrap';
 
 const Header = ({ siteTitle }) => {
@@ -17,47 +20,54 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header
-      className="sticky-top">
-      <Navbar
-        className="shadow-lg"
-        color="white"
-        light
-        expand="md">
-          <Link
-            to="/">
-            {siteTitle}
-          </Link>
-          <NavbarToggler
-            onClick={toggle} />
-          <Collapse
-            isOpen={isOpen}
-            navbar>
-            <Nav
-              className="ml-auto"
-              navbar>
+      className="sticky-top bg-white shadow-lg py-2 py-md-3">
+      <Container>
+        <Row>
+          <Col
+            xs={12}>
+          <Navbar
+            className="p-0"
+            color="white"
+            light
+            expand="md">
               <Link
-                to="/about/">
-                  <NavItem>
-                    About
-                  </NavItem>
+                to="/">
+                {siteTitle}
               </Link>
-              <Link
-                to="/services/">
-                <NavItem
-                  className="ml-md-3">
-                    Services
-                </NavItem>
-              </Link>
-              <Link
-                to="/contact/">
-                <NavItem
-                  className="ml-md-3">
-                    Contact
-                </NavItem>
-              </Link>
-            </Nav>
-          </Collapse>
-      </Navbar>
+              <NavbarToggler
+                onClick={toggle} />
+              <Collapse
+                isOpen={isOpen}
+                navbar>
+                <Nav
+                  className="ml-auto"
+                  navbar>
+                  <Link
+                    to="/about/">
+                      <NavItem>
+                        About
+                      </NavItem>
+                  </Link>
+                  <Link
+                    to="/services/">
+                    <NavItem
+                      className="ml-md-3">
+                        Services
+                    </NavItem>
+                  </Link>
+                  <Link
+                    to="/contact/">
+                    <NavItem
+                      className="ml-md-3">
+                        Contact
+                    </NavItem>
+                  </Link>
+                </Nav>
+              </Collapse>
+            </Navbar>
+          </Col>
+        </Row>
+      </Container>
     </header>
   )
 }
