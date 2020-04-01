@@ -18,7 +18,6 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
-import FluidImage from '../components/fluid-image'
 import SEO from "../components/seo"
 
 const IndexPage = () => {
