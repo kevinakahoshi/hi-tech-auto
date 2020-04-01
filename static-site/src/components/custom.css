@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;900&display=swap');
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  font-weight: 300;
+}
+
 .hero-banner {
-  min-height: 75vh;
+  min-height: 70vh;
+  background-color: #00000020
 }
 
 .image-angle {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, -50% 70%);
+  height: 250px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
 
 .card {
@@ -14,4 +26,26 @@
 .card:hover {
   transform: translateY(-.5rem);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+
+.down-scroll-container {
+  bottom: 0;
+}
+
+.down-scroll-arrow {
+  animation: bounce-arrow 1s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }

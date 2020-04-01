@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha3",
     "gatsby": "^2.19.45",
     "gatsby-background-image": "^1.0.1",
     "gatsby-image": "^2.2.44",
