@@ -18,8 +18,9 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
-import Gallery from '../components/gallery';
-import SEO from "../components/seo"
+// import Gallery from '../components/gallery';
+import ImageCarousel from '../components/image-carousel';
+import SEO from "../components/seo";
 
 const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
@@ -204,7 +205,10 @@ const IndexPage = () => {
           className="p-0">
           <Row
             noGutters={true}>
-              <Gallery galleryImages={imageData.allFile.nodes} />
+              {/* <Gallery
+                galleryImages={imageData.allFile.nodes} /> */}
+              <ImageCarousel
+                carouselImages={imageData.allFile.nodes} />
           </Row>
         </Container>
       </section>
