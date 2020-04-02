@@ -18,6 +18,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
+import Gallery from '../components/gallery';
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -40,10 +41,11 @@ const IndexPage = () => {
       <SEO
         title="Home" />
       <BackgroundImage
+        id="hero-banner"
         fadeIn={true}
         Tag="div"
         className="d-flex position-relative hero-banner"
-        fluid={imageData.allFile.nodes[2].childImageSharp.fluid} >
+        fluid={imageData.allFile.nodes[1].childImageSharp.fluid} >
           <Container
             className="py-5 m-auto">
             <Row
@@ -83,6 +85,7 @@ const IndexPage = () => {
           </div>
       </BackgroundImage>
       <section
+        id="about"
         className="bg-white">
         <Container
           className="py-5">
@@ -105,6 +108,7 @@ const IndexPage = () => {
         </Container>
       </section>
       <section
+        id="services"
         className="bg-light">
         <Container
           className="py-5">
@@ -124,7 +128,7 @@ const IndexPage = () => {
                   className="border rounded bg-white h-100">
                   <Img
                     className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[3].childImageSharp.fluid} />
+                    fluid={imageData.allFile.nodes[2].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -146,7 +150,7 @@ const IndexPage = () => {
                   className="border rounded bg-white h-100 five-hover">
                   <Img
                     className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[4].childImageSharp.fluid} />
+                    fluid={imageData.allFile.nodes[3].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -168,7 +172,7 @@ const IndexPage = () => {
                   className="border rounded bg-white h-100 five-hover">
                   <Img
                     className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[5].childImageSharp.fluid} />
+                    fluid={imageData.allFile.nodes[4].childImageSharp.fluid} />
                   <CardBody>
                     <CardTitle>
                       <h3>
@@ -193,13 +197,14 @@ const IndexPage = () => {
         </Container>
       </section>
       <section
+        id="gallery"
         className="bg-white">
         <Container
-          fluid>
-          <Row>
-            <Col
-              xs={12}>
-            </Col>
+          fluid
+          className="p-0">
+          <Row
+            noGutters={true}>
+              <Gallery galleryImages={imageData.allFile.nodes} />
           </Row>
         </Container>
       </section>

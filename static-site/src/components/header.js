@@ -42,9 +42,16 @@ const Header = ({ siteTitle }) => {
                 <Nav
                   className="ml-auto"
                   navbar>
+                    <Link
+                    to="/">
+                      <NavItem>
+                        Home
+                      </NavItem>
+                    </Link>
                   <Link
                     to="/about/">
-                      <NavItem>
+                      <NavItem
+                        className="ml-md-3">
                         About
                       </NavItem>
                   </Link>
