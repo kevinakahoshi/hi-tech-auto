@@ -5,8 +5,6 @@ import {
   CarouselControl,
   CarouselIndicators
 } from 'reactstrap';
-// import Img from "gatsby-image";
-
 
 const ImageCarousel = props => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -16,7 +14,10 @@ const ImageCarousel = props => {
     if (animating) {
       return;
     }
-    const nextIndex = currentIndex === props.carouselImages.length - 1 ? 0 : currentIndex + 1;
+    const nextIndex =
+      currentIndex === props.carouselImages.length - 1
+        ? 0
+        : currentIndex + 1;
     setCurrentIndex(nextIndex);
   }
 
@@ -24,7 +25,10 @@ const ImageCarousel = props => {
     if (animating) {
       return;
     }
-    const nextIndex = currentIndex === props.carouselImages.length - 1 ? 0 : currentIndex - 1;
+    const nextIndex =
+      currentIndex === props.carouselImages.length - 1
+        ? 0
+        : currentIndex - 1;
     setCurrentIndex(nextIndex);
   }
 
@@ -45,8 +49,6 @@ const ImageCarousel = props => {
             alt=""
             src={image.childImageSharp.fluid.src}
             className="image-slide w-100" />
-          {/* <Img
-            fluid={image.childImageSharp.fluid} /> */}
       </CarouselItem>
     )
   })
