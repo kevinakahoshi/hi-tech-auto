@@ -3,9 +3,9 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  // CarouselIndicators,
+  CarouselIndicators
 } from 'reactstrap';
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 
 const ImageCarousel = props => {
@@ -16,7 +16,6 @@ const ImageCarousel = props => {
     if (animating) {
       return;
     }
-
     const nextIndex = currentIndex === props.carouselImages.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(nextIndex);
   }
@@ -25,27 +24,29 @@ const ImageCarousel = props => {
     if (animating) {
       return;
     }
-
     const nextIndex = currentIndex === props.carouselImages.length - 1 ? 0 : currentIndex - 1;
     setCurrentIndex(nextIndex);
   }
 
-  // const directImage = newIndex => {
-  //   if (animating) {
-  //     return;
-  //   }
+  const directImage = newIndex => {
+    if (animating) {
+      return;
+    }
+    setCurrentIndex(newIndex);
+  }
 
-  //   setCurrentIndex(newIndex);
-  // }
-
-  const allSlides = props.carouselImages.map((image, index) => {
+  const allSlides = props.carouselImages.map(image => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={index}>
-          <Img
-            fluid={image.childImageSharp.fluid} />
+        key={image.childImageSharp.id}>
+          <img
+            alt=""
+            src={image.childImageSharp.fluid.src}
+            className="image-slide w-100" />
+          {/* <Img
+            fluid={image.childImageSharp.fluid} /> */}
       </CarouselItem>
     )
   })
@@ -54,12 +55,12 @@ const ImageCarousel = props => {
     <Carousel
       activeIndex={currentIndex}
       next={next}
-      previous={previous}>
-        {/* <CarouselIndicators
-
-          items={props.carouselImages}
+      previous={previous}
+      className="image-carousel">
+        <CarouselIndicators
+          items={allSlides}
           activeIndex={currentIndex}
-          onClickHandler={directImage} /> */}
+          onClickHandler={directImage} />
         {allSlides}
         <CarouselControl
           direction="prev"

@@ -36,6 +36,16 @@ p {
   animation: bounce-arrow 1s ease-in-out infinite;
 }
 
+.image-carousel img {
+  max-height: 75vh;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.image-slide {
+  background-position: center;
+}
+
 @keyframes bounce-arrow {
   0% {
     transform: translateY(0%);
