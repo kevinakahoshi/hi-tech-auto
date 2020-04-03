@@ -25,9 +25,12 @@ import SEO from "../components/seo";
 const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
     query AllImages {
-      allFile {
+      allFile(filter: {relativeDirectory: {
+        eq: "home"
+      }}) {
         nodes {
           childImageSharp {
+            id
             fluid(maxWidth: 1920,) {
               ...GatsbyImageSharpFluid
             }
