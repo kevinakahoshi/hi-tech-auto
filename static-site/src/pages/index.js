@@ -18,7 +18,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from "../components/layout"
-// import Gallery from '../components/gallery';
+import Gallery from '../components/gallery';
 import ImageCarousel from '../components/image-carousel';
 import SEO from "../components/seo";
 
@@ -208,8 +208,8 @@ const IndexPage = () => {
           className="p-0">
           <Row
             noGutters={true}>
-              {/* <Gallery
-                galleryImages={imageData.allFile.nodes} /> */}
+              <Gallery
+                galleryImages={imageData.allFile.nodes} />
               <ImageCarousel
                 carouselImages={imageData.allFile.nodes} />
           </Row>
@@ -217,25 +217,5 @@ const IndexPage = () => {
       </section>
     </Layout>
 )};
-
-// const Image = () => {
-//   const data = useStaticQuery(graphql `
-//     query {
-//       placeholderImage: file(relativePath: { eq: "tools.jpg" }) {
-//         childImageSharp {
-//           fluid(maxWidth: 1920) {
-//             ...GatsbyImageSharpFluid
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   return (
-//   <Img
-//     className="rounded-top image-angle"
-//     fluid={data.placeholderImage.childImageSharp.fluid} />
-//   )
-// }
 
 export default IndexPage

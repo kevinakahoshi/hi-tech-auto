@@ -46,6 +46,12 @@ p {
   background-position: center;
 }
 
+.gallery-image {
+  /* min-height: 300px; */
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
 @media (max-width: 575px) {
   .image-carousel img {
     height: 50vh;
