@@ -29,7 +29,7 @@ p {
 }
 
 .down-scroll-container {
-  bottom: 0;
+  bottom: 1rem;
 }
 
 .down-scroll-arrow {
@@ -37,13 +37,19 @@ p {
 }
 
 .image-carousel img {
-  max-height: 75vh;
+  height: 75vh;
   object-fit: cover;
   margin-bottom: 0;
 }
 
 .image-slide {
   background-position: center;
+}
+
+@media (max-width: 575px) {
+  .image-carousel img {
+    height: 50vh;
+  }
 }
 
 @keyframes bounce-arrow {
