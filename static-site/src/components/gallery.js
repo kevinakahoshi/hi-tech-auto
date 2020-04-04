@@ -1,7 +1,7 @@
 import React, {
   createRef,
   useState,
-  use
+  useEffect
 } from 'react';
 import {
   Col
@@ -13,9 +13,13 @@ const Gallery = props => {
   const galleryRef = createRef(null);
   const [imageHeight, setImageHeight] = useState(null)
 
-  React.useEffect(() => {
-    if (galleryRef.current.imageRef.current.width !== imageHeight) {
-      setImageHeight(galleryRef.current.imageRef.current.width);
+  useEffect(() => {
+    if (!galleryRef.current) {
+      galleryRef.current = true;
+    } else {
+      if (galleryRef.current.imageRef.current.width !== imageHeight) {
+        setImageHeight(galleryRef.current.imageRef.current.width);
+      }
     }
     console.log(galleryRef.current.imageRef.current.width)
   }, [galleryRef]);
@@ -28,6 +32,7 @@ const Gallery = props => {
         sm={6}>
           <Img
             ref={galleryRef}
+            loading="lazy"
             style={{ minHeight: imageHeight }}
             fluid={image.childImageSharp.fluid}
             className="gallery-image" />
