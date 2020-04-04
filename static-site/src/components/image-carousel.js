@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {
+  useState,
+  useEffect
+} from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -7,8 +10,8 @@ import {
 } from 'reactstrap';
 
 const ImageCarousel = props => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [animating, setAnimating] = React.useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
   const next = () => {
     if (animating) {
@@ -58,7 +61,7 @@ const ImageCarousel = props => {
       activeIndex={currentIndex}
       next={next}
       previous={previous}
-      className="image-carousel">
+      className="image-carousel w-100">
         <CarouselIndicators
           items={allSlides}
           activeIndex={currentIndex}
