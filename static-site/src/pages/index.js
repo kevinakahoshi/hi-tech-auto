@@ -210,8 +210,11 @@ const IndexPage = () => {
             noGutters={true}>
               <Gallery
                 galleryImages={imageData.allFile.nodes} />
-              <ImageCarousel
-                carouselImages={imageData.allFile.nodes} />
+              <div
+                className="d-block d-sm-none">
+                <ImageCarousel
+                  carouselImages={imageData.allFile.nodes} />
+              </div>
           </Row>
         </Container>
       </section>

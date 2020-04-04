@@ -8,28 +8,31 @@ import {
 } from 'reactstrap';
 import Img from "gatsby-image";
 
-
 const Gallery = props => {
   const galleryRef = createRef(null);
-  const [imageHeight, setImageHeight] = useState(null)
+  const [imageHeight, setImageHeight] = useState(null);
+
+  window.addEventListener('resize', () => {
+    if (galleryRef.current) {
+      setImageHeight(galleryRef.current.imageRef.current.width);
+    }
+  });
 
   useEffect(() => {
     if (!galleryRef.current) {
       galleryRef.current = true;
     } else {
-      if (galleryRef.current.imageRef.current.width !== imageHeight) {
-        setImageHeight(galleryRef.current.imageRef.current.width);
-      }
+      setImageHeight(galleryRef.current.imageRef.current.width);
     }
-    console.log(galleryRef.current.imageRef.current.width)
   }, [galleryRef]);
 
   return props.galleryImages.map((image, index) => {
     return (
       <Col
         key={index}
-        md={3}
-        sm={6}>
+        lg={3}
+        sm={6}
+        className="d-none d-sm-block">
           <Img
             ref={galleryRef}
             loading="lazy"
