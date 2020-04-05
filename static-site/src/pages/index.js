@@ -218,6 +218,20 @@ const IndexPage = () => {
           </Row>
         </Container>
       </section>
+      <section
+        className="bg-white py-5">
+          <Container>
+            <Row>
+              <Col
+                xs={12}>
+                  <h4
+                    className="h1 text-center">
+                      Have questions for us?
+                  </h4>
+                </Col>
+            </Row>
+          </Container>
+      </section>
     </Layout>
 )};
 
