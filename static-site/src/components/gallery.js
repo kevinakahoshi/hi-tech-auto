@@ -33,12 +33,20 @@ const Gallery = props => {
         lg={3}
         sm={6}
         className="d-none d-sm-block">
-          <Img
-            ref={galleryRef}
-            loading="lazy"
-            style={{ minHeight: imageHeight }}
-            fluid={image.childImageSharp.fluid}
-            className="gallery-image" />
+          <div
+            role="button"
+            tabIndex="0"
+            onKeyPress={() => props.toggle(image.childImageSharp.fluid)}
+            onClick={() => props.toggle(image.childImageSharp.fluid)}
+            className="image-gallery-container">
+            <Img
+              onClick={() => props.toggle(image.childImageSharp.fluid)}
+              ref={galleryRef}
+              loading="lazy"
+              style={{ minHeight: imageHeight }}
+              fluid={image.childImageSharp.fluid}
+              className="gallery-image pointer" />
+          </div>
       </Col>
       )});
 }

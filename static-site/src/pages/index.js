@@ -1,4 +1,6 @@
-import React from "react";
+import React, {
+  useState
+} from "react";
 import {
   Link,
   useStaticQuery,
@@ -20,9 +22,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Layout from "../components/layout"
 import Gallery from '../components/gallery';
 import ImageCarousel from '../components/image-carousel';
+import ImageModal from '../components/image-modal';
 import SEO from "../components/seo";
 
 const IndexPage = () => {
+  const [modal, setModal] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+  const toggle = image => {
+    if (modal) {
+      setTimeout(() => {
+        setModalImage(null);
+      }, 500)
+    } else {
+      setModalImage(image);
+    }
+    setModal(!modal)
+  };
+
   const imageData = useStaticQuery(graphql`
     query AllImages {
       allFile(filter: {relativeDirectory: {
@@ -209,7 +225,12 @@ const IndexPage = () => {
           <Row
             noGutters={true}>
               <Gallery
+                toggle={toggle}
                 galleryImages={imageData.allFile.nodes} />
+              <ImageModal
+                toggle={toggle}
+                modal={modal}
+                modalImage={modalImage} />
               <div
                 className="d-block d-sm-none">
                 <ImageCarousel
@@ -228,6 +249,10 @@ const IndexPage = () => {
                     className="h1 text-center">
                       Have questions for us?
                   </h4>
+                  <h5
+                    className="text-center mb-0">
+                      Give us a call at <a href="tel:+16264481733">626-448-1733</a>
+                  </h5>
                 </Col>
             </Row>
           </Container>

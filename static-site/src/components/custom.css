@@ -52,6 +52,29 @@ p {
   margin-bottom: 0;
 }
 
+.image-gallery-container:focus {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, .5);
+  outline: 0;
+}
+
+.close-button {
+  z-index: 1100;
+  top: 2rem;
+  right: 2rem;
+  line-height: 1.5rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Reactstrap modal keeps making the sticky navigation disappear */
+.overflow-initial {
+  overflow: initial!important;
+}
+
 @media (max-width: 575px) {
   .image-carousel img {
     height: 50vh;
