@@ -62,6 +62,14 @@ p {
   outline: 0;
 }
 
+.nav-logo:focus,
+.navbar-toggler:focus,
+.nav-links:focus {
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, .5);
+  outline: 0;
+}
+
 .close-button {
   z-index: 1100;
   top: 2rem;
