@@ -6,7 +6,7 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby"
-import BackgroundImage from 'gatsby-background-image';
+// import BackgroundImage from 'gatsby-background-image';
 import Img from "gatsby-image";
 import {
   Container,
@@ -19,11 +19,12 @@ import {
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Layout from "../components/layout"
+import Layout from '../components/layout'
+import HeroBanner from '../components/hero-banner';
 import Gallery from '../components/gallery';
 import ImageCarousel from '../components/image-carousel';
 import ImageModal from '../components/image-modal';
-import SEO from "../components/seo";
+import SEO from '../components/seo';
 
 const IndexPage = () => {
   const [modal, setModal] = useState(false);
@@ -60,50 +61,9 @@ const IndexPage = () => {
     <Layout>
       <SEO
         title="Home" />
-      <BackgroundImage
-        id="hero-banner"
-        fadeIn={true}
-        Tag="div"
-        className="d-flex position-relative hero-banner"
-        fluid={imageData.allFile.nodes[1].childImageSharp.fluid} >
-          <Container
-            className="py-5 m-auto">
-            <Row
-              className="align-items-center">
-              <Col
-                xs={12}>
-                <div
-                  className="m-auto">
-                  <h1
-                    className="text-center text-white">
-                      Hi-Tech Auto
-                  </h1>
-                  <h2
-                    className="text-center text-white">
-                      General Automotive Repair and Service in El Monte, CA
-                  </h2>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-          <div
-            className="position-absolute d-flex w-100 down-scroll-container">
-            <div
-              className="m-auto text-white">
-              <svg className="bi bi-chevron-compact-down down-scroll-arrow"
-                width="2rem"
-                height="2rem"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fillRule="evenodd"
-                    d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z"
-                    clipRule="evenodd"/>
-              </svg>
-            </div>
-          </div>
-      </BackgroundImage>
+      <HeroBanner
+        heroImage={imageData.allFile.nodes[1].childImageSharp.fluid}
+        index={true} />
       <section
         id="about"
         className="bg-white">
