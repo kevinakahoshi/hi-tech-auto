@@ -9,8 +9,12 @@ p {
 }
 
 .hero-banner {
-  min-height: 70vh;
+  min-height: 75vh;
   background-color: #00000020
+}
+
+.hero-banner-child {
+  min-height: 50vh;
 }
 
 .image-angle {
@@ -47,7 +51,6 @@ p {
 }
 
 .gallery-image {
-  /* min-height: 300px; */
   object-fit: cover;
   margin-bottom: 0;
 }
