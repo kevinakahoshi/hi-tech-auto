@@ -31,6 +31,7 @@ const Header = ({ siteTitle }) => {
             light
             expand="md">
               <Link
+                className="nav-logo"
                 to="/">
                 {siteTitle}
               </Link>
@@ -42,33 +43,38 @@ const Header = ({ siteTitle }) => {
                 <Nav
                   className="ml-auto"
                   navbar>
+                  <NavItem
+                    className="my-2 my-md-0">
                     <Link
-                    to="/">
-                      <NavItem>
-                        Home
-                      </NavItem>
+                      className="nav-links d-block"
+                      to="/">
+                          Home
                     </Link>
-                  <Link
-                    to="/about/">
-                      <NavItem
-                        className="ml-md-3">
-                        About
-                      </NavItem>
-                  </Link>
-                  <Link
-                    to="/services/">
+                  </NavItem>
+                  <NavItem
+                    className="my-2 my-md-0 ml-md-3">
+                    <Link
+                      className="nav-links d-block"
+                      to="/about/">
+                          About
+                    </Link>
+                  </NavItem>
                     <NavItem
-                      className="ml-md-3">
-                        Services
+                      className="my-2 my-md-0 ml-md-3">
+                      <Link
+                        className="nav-links d-block"
+                        to="/services/">
+                          Services
+                      </Link>
                     </NavItem>
-                  </Link>
-                  <Link
-                    to="/contact/">
-                    <NavItem
-                      className="ml-md-3">
+                  <NavItem
+                    className="my-2 my-md-0 ml-md-3">
+                    <Link
+                      className="nav-links d-block"
+                      to="/contact/">
                         Contact
-                    </NavItem>
-                  </Link>
+                    </Link>
+                  </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>
