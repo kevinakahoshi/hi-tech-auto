@@ -4,6 +4,9 @@ import {
   Row,
   Col
 } from 'reactstrap';
+import {
+  Link
+} from 'gatsby';
 
 const Footer = () => (
   <footer
@@ -18,18 +21,30 @@ const Footer = () => (
             </h5>
             <p
               className="mb-0">
-              Home
+              <Link
+                to="/">
+                Home
+              </Link>
             </p>
             <p
               className="mb-0">
-              About
+              <Link
+                to="/about/">
+                About
+              </Link>
             </p>
             <p
               className="mb-0">
-              Services
+              <Link
+                to="/services/">
+                Services
+              </Link>
             </p>
             <p>
-              Contact
+              <Link
+                to="/contact/">
+                Contact
+              </Link>
             </p>
           </Col>
           <Col
@@ -55,7 +70,11 @@ const Footer = () => (
           sm={6}
           xs={12}>
             <div
-              className="bg-dark h-100 mb-3">
+              className="bg-dark h-100 mb-3 d-flex">
+                <h6
+                  className="m-auto text-white">
+                    Map goes here
+                </h6>
             </div>
           </Col>
         <Col
