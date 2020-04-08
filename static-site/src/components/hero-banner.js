@@ -13,7 +13,9 @@ const HeroBanner = props => {
         id="hero-banner"
         fadeIn={true}
         Tag="div"
-        className={`d-flex position-relative ${props.index ? 'hero-banner' : 'hero-banner-child'}`}
+        className={`d-flex position-relative ${props.index
+          ? 'hero-banner'
+          : 'hero-banner-child'}`}
         fluid={props.heroImage} >
           <Container
             className="py-5 m-auto">
@@ -23,19 +25,27 @@ const HeroBanner = props => {
                 xs={12}>
                 <div
                   className="m-auto">
-                  <h1
-                    className="text-center text-white">
-                      Hi-Tech Auto
-                  </h1>
-                  <h2
-                    className="text-center text-white">
-                      General Automotive Repair and Service in El Monte, CA
-                  </h2>
+                  {props.h1Text
+                    ? <h1
+                        className={`text-center text-white ${props.h2Text
+                        ? ''
+                        : 'mb-0'}`}>
+                          {props.h1Text}
+                      </h1>
+                    : null}
+                  {props.h2Text
+                    ? <h2
+                        className="text-center text-white mb-0">
+                          {props.h2Text}
+                      </h2>
+                    : null}
                 </div>
               </Col>
             </Row>
           </Container>
-          {props.index ? <DownArrow /> : null}
+          {props.index
+            ? <DownArrow />
+            : null}
       </BackgroundImage>
   )
 }
