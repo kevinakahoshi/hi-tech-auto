@@ -65,6 +65,8 @@ const IndexPage = () => {
         title="Home" />
       <HeroBanner
         heroImage={imageData.allFile.nodes[1].childImageSharp.fluid}
+        h1Text={h1Text}
+        h2Text={h2Text}
         index={true} />
       <section
         id="about"

@@ -10,6 +10,8 @@ import SEO from "../components/seo";
 import HeroBanner from '../components/hero-banner';
 
 const About = () => {
+  const h1Text = 'About Hi-Tech Auto'
+
   const imageData = useStaticQuery(graphql `
     query AboutImages {
       allFile(filter: {relativeDirectory: {
@@ -31,8 +33,10 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
+        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid}
         index={false}
-        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid} />
+        h1Text={h1Text}
+        h2Text={false} />
     </Layout>
   )
 }
