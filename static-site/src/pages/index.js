@@ -6,7 +6,6 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby"
-// import BackgroundImage from 'gatsby-background-image';
 import Img from "gatsby-image";
 import {
   Container,
@@ -29,6 +28,9 @@ import SEO from '../components/seo';
 const IndexPage = () => {
   const [modal, setModal] = useState(false);
   const [modalImage, setModalImage] = useState(null);
+  const h1Text = 'Hi-Tech Auto';
+  const h2Text = 'General Automotive Repair and Service in El Monte, CA';
+
   const toggle = image => {
     if (modal) {
       setTimeout(() => {
