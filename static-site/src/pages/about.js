@@ -3,7 +3,12 @@ import {
   // Link,
   useStaticQuery,
   graphql
-} from "gatsby"
+} from "gatsby";
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -37,6 +42,22 @@ const About = () => {
         index={false}
         h1Text={h1Text}
         h2Text={false} />
+      <section
+        className="bg-white py-5">
+          <Container>
+            <Row>
+              <Col
+                xs={12}>
+                <h3>
+                  What makes Hi-Tech Auto Special?
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet proin fermentum leo vel orci. Sem integer vitae justo eget magna. Egestas maecenas pharetra convallis posuere morbi. Adipiscing elit ut aliquam purus sit amet. A scelerisque purus semper eget duis at tellus at urna. Quis varius quam quisque id. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nisi quis eleifend quam adipiscing vitae. Enim blandit volutpat maecenas volutpat. Id neque aliquam vestibulum morbi blandit cursus risus.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+      </section>
     </Layout>
   )
 }

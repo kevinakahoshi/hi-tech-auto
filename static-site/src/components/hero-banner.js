@@ -17,32 +17,26 @@ const HeroBanner = props => {
           ? 'hero-banner'
           : 'hero-banner-child'}`}
         fluid={props.heroImage} >
-          <Container
-            className="py-5 m-auto">
-            <Row
-              className="align-items-center">
-              <Col
-                xs={12}>
-                <div
-                  className="m-auto">
-                  {props.h1Text
-                    ? <h1
-                        className={`text-center text-white ${props.h2Text
-                        ? ''
-                        : 'mb-0'}`}>
-                          {props.h1Text}
-                      </h1>
-                    : null}
-                  {props.h2Text
-                    ? <h2
-                        className="text-center text-white mb-0">
-                          {props.h2Text}
-                      </h2>
-                    : null}
-                </div>
-              </Col>
-            </Row>
-          </Container>
+          <div
+            className="hero-overlay d-flex w-100">
+            <Container
+              className="m-auto">
+              {props.h1Text
+                ? <h1
+                    className={`text-center text-white ${props.h2Text
+                    ? ''
+                    : 'mb-0'}`}>
+                      {props.h1Text}
+                  </h1>
+                : null}
+              {props.h2Text
+                ? <h2
+                    className="text-center text-white mb-0">
+                      {props.h2Text}
+                  </h2>
+                : null}
+            </Container>
+          </div>
           {props.index
             ? <DownArrow />
             : null}
