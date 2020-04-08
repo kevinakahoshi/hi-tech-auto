@@ -1,16 +1,40 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import {
+  // Link,
+  useStaticQuery,
+  graphql
+} from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import HeroBanner from '../components/hero-banner';
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="About" />
-    <h1>Hi from the About page</h1>
-    <p>Welcome to About</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const About = () => {
+  const imageData = useStaticQuery(graphql `
+    query AboutImages {
+      allFile(filter: {relativeDirectory: {
+        eq: "about"
+      }}) {
+        nodes {
+          childImageSharp {
+            id
+            fluid(maxWidth: 1920,) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `);
 
-export default SecondPage
+  return (
+    <Layout>
+      <SEO title="About" />
+      <HeroBanner
+        index={false}
+        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid} />
+    </Layout>
+  )
+}
+
+export default About
