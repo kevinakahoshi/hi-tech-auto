@@ -75,6 +75,15 @@ p {
   outline: 0;
 }
 
+.value-props {
+  border: 1px solid transparent;
+  transition: .3s all;
+}
+
+.value-props:hover {
+  border-color: #ffffff;
+}
+
 .close-button {
   z-index: 1100;
   top: 2rem;
