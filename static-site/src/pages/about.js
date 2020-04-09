@@ -65,10 +65,17 @@ const About = () => {
           <Container>
             <Row>
               <Col
+                xs={12}>
+                  <h3
+                    className="text-white text-center mb-3">
+                    Our Value Props
+                  </h3>
+              </Col>
+              <Col
                 xs={6}
-                sm={3}>
+                md={3}>
                 <div
-                  className="value-props rounded p-3">
+                  className="value-props rounded p-3 my-3">
                   <svg
                     className="bi bi-people text-white d-block mx-auto"
                     width="2.5rem"
@@ -89,9 +96,9 @@ const About = () => {
               </Col>
               <Col
                 xs={6}
-                sm={3}>
+                md={3}>
                 <div
-                  className="value-props rounded p-3">
+                  className="value-props rounded p-3 my-3">
                   <svg
                     className="bi bi-wrench text-white d-block mx-auto"
                     width="2.5rem"
@@ -112,9 +119,9 @@ const About = () => {
               </Col>
               <Col
                 xs={6}
-                sm={3}>
+                md={3}>
                 <div
-                  className="value-props rounded p-3">
+                  className="value-props rounded p-3 my-3">
                   <svg
                     className="bi bi-heart text-white d-block mx-auto"
                     width="2.5rem"
@@ -135,9 +142,9 @@ const About = () => {
               </Col>
               <Col
                 xs={6}
-                sm={3}>
+                md={3}>
                 <div
-                  className="value-props rounded p-3">
+                  className="value-props rounded p-3 my-3">
                   <svg
                     className="bi bi-wallet text-white d-block mx-auto"
                     width="2.5rem"
