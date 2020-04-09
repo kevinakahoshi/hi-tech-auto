@@ -80,7 +80,7 @@ const IndexPage = () => {
                   About Hi-Tech Auto
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh tortor id aliquet lectus. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at.
+                  Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Sagittis eu volutpat odio facilisis mauris sit. Nisl suscipit adipiscing bibendum est. Adipiscing enim eu turpis egestas pretium aenean pharetra. Aliquam sem et tortor consequat id porta. Volutpat odio facilisis mauris sit. Mattis rhoncus urna neque viverra. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Non arcu risus quis varius. Lacinia at quis risus sed vulputate odio ut enim blandit. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Quisque id diam vel quam elementum.
                 </p>
                 <Link
                   className="btn btn-primary"

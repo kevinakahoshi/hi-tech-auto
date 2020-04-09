@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;900&display=swap');
 
+/* Reactstrap modal keeps making the sticky navigation disappear */
+body {
+  overflow: initial!important;
+  padding: 0!important;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Inter', sans-serif;
 }
@@ -93,11 +99,6 @@ p {
 
 .pointer {
   cursor: pointer;
-}
-
-/* Reactstrap modal keeps making the sticky navigation disappear */
-.overflow-initial {
-  overflow: initial!important;
 }
 
 @media (max-width: 575px) {
