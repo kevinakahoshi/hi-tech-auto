@@ -90,6 +90,19 @@ p {
   border-color: #ffffff;
 }
 
+.service-cards {
+  border: 1px solid #fff;
+  transition: .3s all;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.103);
+}
+
+.service-cards:hover {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .175);
+  transform: translateY(-2%);
+}
+
 .close-button {
   z-index: 1100;
   top: 2rem;

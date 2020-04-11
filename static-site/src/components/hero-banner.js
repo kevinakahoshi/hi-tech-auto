@@ -1,9 +1,7 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import {
-  Container,
-  Row,
-  Col
+  Container
 } from 'reactstrap';
 import DownArrow from './down-arrow';
 
