@@ -109,7 +109,7 @@ const IndexPage = () => {
               md={6}
               sm={12}>
                 <Card
-                  className="border rounded bg-white h-100">
+                  className="service-card-index border rounded bg-white h-100">
                   <Img
                     className="rounded-top image-angle"
                     fluid={imageData.allFile.nodes[2].childImageSharp.fluid} />
@@ -131,7 +131,7 @@ const IndexPage = () => {
               md={6}
               sm={12}>
                 <Card
-                  className="border rounded bg-white h-100 five-hover">
+                  className="service-card-index border rounded bg-white h-100">
                   <Img
                     className="rounded-top image-angle"
                     fluid={imageData.allFile.nodes[3].childImageSharp.fluid} />
@@ -153,7 +153,7 @@ const IndexPage = () => {
                 md={6}
                 sm={12}>
                 <Card
-                  className="border rounded bg-white h-100 five-hover">
+                  className="service-card-index border rounded bg-white h-100">
                   <Img
                     className="rounded-top image-angle"
                     fluid={imageData.allFile.nodes[4].childImageSharp.fluid} />
