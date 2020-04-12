@@ -4,16 +4,10 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby";
-import Img from 'gatsby-image';
 import {
   Container,
   Row,
   Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  Button
 } from 'reactstrap';
 
 import Layout from "../components/layout";
