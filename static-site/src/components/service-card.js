@@ -9,7 +9,9 @@ import {
 
 const ServiceCard = props => (
   <Card
-    className={`service-card${props.page === 'index' ? '-index' : ''} border rounded bg-white h-100`}>
+    className={`service-card${props.page === 'index'
+      ? '-index'
+      : ''} border rounded bg-white h-100`}>
     <Img
       className="rounded-top image-angle"
       fluid={props.image} />
