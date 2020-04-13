@@ -162,11 +162,18 @@ const Services = () => {
               <Col
                 xs={12}
                 className="d-flex justify-content-center">
-                <Link
-                  className="btn btn-primary m-auto"
-                  to="/contact/">
-                    Give Us a Call Today
-                </Link>
+                {window.innerWidth < 768
+                  ? <a
+                      href="tel:+16264431788"
+                      className="btn btn-primary m-auto">
+                      Give Us a Call Today
+                    </a>
+                  : <Link
+                      className="btn btn-primary m-auto"
+                      to='/contact/'>
+                        Give Us a Call Today
+                    </Link>}
+
               </Col>
             </Row>
           </Container>
