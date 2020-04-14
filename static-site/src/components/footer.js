@@ -17,94 +17,112 @@ const Footer = () => (
           lg={4}
           md={6}
           xs={12}>
-          <h5>
-            Sitemap
-          </h5>
-          <p
-            className="mb-0">
-            <Link
-              to="/">
-              Home
-            </Link>
-          </p>
-          <p
-            className="mb-0">
-            <Link
-              to="/about/">
-              About
-            </Link>
-          </p>
-          <p
-            className="mb-0">
-            <Link
-              to="/services/">
-              Services
-            </Link>
-          </p>
-          <p>
-            <Link
-              to="/contact/">
-              Contact
-            </Link>
-          </p>
+          <div
+            className="p-3 mb-3 mb-md-0 border rounded">
+            <h5>
+              Sitemap
+            </h5>
+            <div
+              className="footer-sitemap d-flex flex-wrap justify-content-between">
+              <p
+                className="mb-3 mb-md-0">
+                <Link
+                  to="/">
+                  Home
+                </Link>
+              </p>
+              <p
+                className="mb-3 mb-md-0">
+                <Link
+                  to="/about/">
+                  About
+                </Link>
+              </p>
+              <p
+                className="mb-3 mb-md-0">
+                <Link
+                  to="/services/">
+                  Services
+                </Link>
+              </p>
+              <p>
+                <Link
+                  to="/contact/">
+                  Contact
+                </Link>
+              </p>
+            </div>
+            <h5>
+              Phone
+            </h5>
+            <p
+              className="mb-0">
+              <a
+                href="+16264481733">
+                626-448-1733
+              </a>
+            </p>
+          </div>
         </Col>
         <Col
           lg={4}
           md={6}
           xs={12}>
-          <h5>
-            Hours
-          </h5>
           <div
-            className="mb-3">
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Monday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Tuesday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Wednesday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Thursday</p>
-              <p
-                className="mb-0">Closed</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Friday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Saturday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
-            </div>
-            <div
-              className="d-flex justify-content-between mb-1">
-              <p
-                className="mb-0">Sunday</p>
-              <p
-                className="mb-0">9:00AM - 6:00PM</p>
+            className="p-3 mb-3 mb-md-0 border rounded">
+            <h5>
+              Hours
+            </h5>
+            <div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Monday</p>
+                <p
+                  className="mb-3">9:00AM - 6:00PM</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Tuesday</p>
+                <p
+                  className="mb-3">9:00AM - 6:00PM</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Wednesday</p>
+                <p
+                  className="mb-3">9:00AM - 6:00PM</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Thursday</p>
+                <p
+                  className="mb-3">Closed</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Friday</p>
+                <p
+                  className="mb-3">9:00AM - 6:00PM</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-3">Saturday</p>
+                <p
+                  className="mb-3">9:00AM - 6:00PM</p>
+              </div>
+              <div
+                className="d-flex justify-content-between">
+                <p
+                  className="mb-0">Sunday</p>
+                <p
+                  className="mb-0">9:00AM - 6:00PM</p>
+              </div>
             </div>
           </div>
         </Col>
