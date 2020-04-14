@@ -64,9 +64,9 @@ const Contact = () => {
                       Phone
                     </h3>
                     <a
-                      href="tel:+1"
+                      href="tel:+16264481733"
                       className="btn btn-primary w-100">
-                      626-555-5555
+                      626-448-1733
                     </a>
                   </div>
               </Col>
