@@ -61,7 +61,7 @@ const Contact = () => {
                   <div
                     className="p-3 border rounded bg-light text-center mb-3">
                     <h3>
-                      Phone
+                      Give Us a Call
                     </h3>
                     <a
                       href="tel:+16264481733"

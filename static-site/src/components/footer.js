@@ -24,22 +24,19 @@ const Footer = () => (
             </h5>
             <div
               className="footer-sitemap d-flex flex-wrap justify-content-between">
-              <p
-                className="mb-3 mb-md-0">
+              <p>
                 <Link
                   to="/">
                   Home
                 </Link>
               </p>
-              <p
-                className="mb-3 mb-md-0">
+              <p>
                 <Link
                   to="/about/">
                   About
                 </Link>
               </p>
-              <p
-                className="mb-3 mb-md-0">
+              <p>
                 <Link
                   to="/services/">
                   Services
@@ -52,6 +49,8 @@ const Footer = () => (
                 </Link>
               </p>
             </div>
+            <div
+              className="dropdown-divider mb-3"></div>
             <h5>
               Phone
             </h5>
@@ -69,7 +68,7 @@ const Footer = () => (
           md={6}
           xs={12}>
           <div
-            className="p-3 mb-3 mb-md-0 border rounded">
+            className="p-3 mb-3 mb-lg-0 border rounded">
             <h5>
               Hours
             </h5>
