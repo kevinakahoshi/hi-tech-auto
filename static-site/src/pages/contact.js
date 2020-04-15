@@ -57,33 +57,27 @@ const Contact = () => {
               </Col>
               <Col
                 xs={12}
-                md={4}>
+                md={6}>
                   <div
                     className="p-3 border rounded bg-light text-center mb-3">
-                    <h3>
-                      Give Us a Call
-                    </h3>
                     <a
                       href="tel:+16264481733"
                       className="btn btn-primary w-100">
-                      626-448-1733
+                        Give Us a Call
                     </a>
                   </div>
               </Col>
               <Col
                 xs={12}
-                md={4}>
+                md={6}>
                   <div
                     className="p-3 border rounded bg-light text-center mb-3">
-                    <h3>
-                      Address
-                    </h3>
-                    <p
-                      className="mb-0">
-                      Hi-Tech Auto <br />
-                      4534 Baldwin Ave, <br />
-                      El Monte, CA 91731
-                    </p>
+                    <a
+                      href="https: //goo.gl/maps/FPit6BzCJBE5aPV38"
+                      target="_blank"
+                      className="btn btn-primary w-100">
+                        Stop By the Shop
+                    </a>
                   </div>
               </Col>
             </Row>

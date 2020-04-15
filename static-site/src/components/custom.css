@@ -39,23 +39,9 @@ p {
 }
 
 .service-card-index:hover {
-  transform: translateY(-.5rem);
+  transform: translateY(-.25rem);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
-
-.service-card-service {
-
-}
-
-/* .card {
-  transition: .3s all;
-  box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .175);
-}
-
-.card:hover {
-  transform: translateY(-.5rem);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-} */
 
 .down-scroll-container {
   bottom: 1rem;
