@@ -73,7 +73,7 @@ const Contact = () => {
                   <div
                     className="p-3 border rounded bg-light text-center mb-3">
                     <a
-                      href="https: //goo.gl/maps/FPit6BzCJBE5aPV38"
+                      href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
                       target="_blank"
                       className="btn btn-primary w-100">
                         Stop By the Shop
