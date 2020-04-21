@@ -7,6 +7,7 @@ import {
 import {
   Link
 } from 'gatsby';
+import LocationMap from './location-map';
 
 const Footer = () => (
   <footer
@@ -18,7 +19,7 @@ const Footer = () => (
           md={6}
           xs={12}>
           <div
-            className="p-3 mb-3 mb-md-0 border rounded">
+            className="footer-boxes p-3 mb-3 mb-md-0 border rounded">
             <h5>
               Sitemap
             </h5>
@@ -50,15 +51,28 @@ const Footer = () => (
               </p>
             </div>
             <div
-              className="dropdown-divider mb-3"></div>
+              className="dropdown-divider mt-0 mb-3"></div>
             <h5>
               Phone
             </h5>
-            <p
-              className="mb-0">
+            <p>
               <a
                 href="+16264481733">
                 626-448-1733
+              </a>
+            </p>
+            <div
+              className="dropdown-divider mt-0 mb-3"></div>
+            <h5>
+              Address
+            </h5>
+            <p
+              className="mb-0">
+              <a href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
+                target="_blank"
+                rel="noopener noreferrer">
+                  4534 Baldwin Ave,<br/>
+                  El Monte, CA 91731
               </a>
             </p>
           </div>
@@ -68,7 +82,7 @@ const Footer = () => (
           md={6}
           xs={12}>
           <div
-            className="p-3 mb-3 mb-lg-0 border rounded">
+            className="footer-boxes p-3 mb-3 mb-lg-0 border rounded">
             <h5>
               Hours
             </h5>
@@ -129,11 +143,8 @@ const Footer = () => (
         lg={4}
         xs={12}>
           <div
-            className="bg-dark h-100 mb-3 d-flex">
-              <h6
-                className="m-auto text-white">
-                  Map goes here
-              </h6>
+            className="footer-boxes">
+            <LocationMap />
           </div>
         </Col>
         <Col

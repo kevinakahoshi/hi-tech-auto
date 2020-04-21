@@ -118,6 +118,12 @@ p {
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  .footer-boxes {
+    height: 100%;
+  }
+}
+
 @media (max-width: 575px) {
   .image-carousel img {
     height: 50vh;

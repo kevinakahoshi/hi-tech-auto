@@ -75,6 +75,7 @@ const Contact = () => {
                     <a
                       href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="btn btn-primary w-100">
                         Stop By the Shop
                     </a>
