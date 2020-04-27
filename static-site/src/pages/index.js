@@ -6,15 +6,15 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby"
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import {
   Container,
   Row,
   Col,
-  Card,
-  CardText,
-  CardBody,
-  CardTitle
+  // Card,
+  // CardText,
+  // CardBody,
+  // CardTitle
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +23,7 @@ import HeroBanner from '../components/hero-banner';
 import Gallery from '../components/gallery';
 import ImageCarousel from '../components/image-carousel';
 import ImageModal from '../components/image-modal';
+import ServiceCard from '../components/service-card';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
@@ -58,6 +59,45 @@ const IndexPage = () => {
       }
     }
   `);
+
+  const listOfServices = [
+    {
+      id: 1,
+      title: 'Oil Change',
+      description: 'Urna duis convallis convallis tellus id interdum. Dis parturient montes nascetur ridiculus. In fermentum et sollicitudin ac orci phasellus. Elit eget gravida cum sociis natoque.',
+      image: imageData.allFile.nodes[1].childImageSharp.fluid
+    },
+    {
+      id: 2,
+      title: 'Tire Rotations',
+      description: 'Sagittis vitae et leo duis ut diam quam nulla. Quisque egestas diam in arcu cursus euismod quis viverra. Et odio pellentesque diam volutpat commodo sed egestas egestas.',
+      image: imageData.allFile.nodes[2].childImageSharp.fluid
+    },
+    {
+      id: 3,
+      title: 'Brake Service',
+      description: 'Aliquet eget sit amet tellus cras. Tellus id interdum velit laoreet id donec ultrices. Tristique magna sit amet purus gravida quis blandit turpis. Sapien et ligula ullamcorper malesuada proin libero nunc. Aliquam sem fringilla ut morbi tincidunt.',
+      image: imageData.allFile.nodes[3].childImageSharp.fluid
+    }
+  ];
+
+  const serviceCards =
+    listOfServices.map(service => {
+      return (
+        <Col
+          xs={12}
+          md={6}
+          lg={4}
+          className="mb-4"
+          key={service.id}>
+          <ServiceCard
+            title={`${service.title}`}
+            description={service.description}
+            image={service.image}
+            page={'index'} />
+        </Col>
+      )
+    });
 
   return (
     <Layout>
@@ -103,7 +143,7 @@ const IndexPage = () => {
                 Our Services
               </h1>
             </Col>
-            <Col
+            {/* <Col
               className="mb-3"
               lg={4}
               md={6}
@@ -160,7 +200,7 @@ const IndexPage = () => {
                   <CardBody>
                     <CardTitle>
                       <h3>
-                        Alignment
+                        Brake Service
                       </h3>
                     </CardTitle>
                     <CardText>
@@ -168,7 +208,8 @@ const IndexPage = () => {
                     </CardText>
                   </CardBody>
                 </Card>
-              </Col>
+              </Col> */}
+              {serviceCards}
               <Col
               xs={12}>
                 <Link
