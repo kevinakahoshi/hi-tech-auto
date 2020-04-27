@@ -65,7 +65,7 @@ const ImageCarousel = props => {
           items={allSlides}
           activeIndex={currentIndex}
           onClickHandler={directImage} />
-        {allSlides}
+          {allSlides}
         <CarouselControl
           direction="prev"
           directionText="Previous"
