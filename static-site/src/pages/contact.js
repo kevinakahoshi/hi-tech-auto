@@ -62,7 +62,7 @@ const Contact = () => {
                     className="p-3 border rounded bg-light text-center mb-3">
                     <a
                       href="tel:+16264481733"
-                      className="btn btn-primary w-100">
+                      className="btn hi-tech-button w-100">
                         Give Us a Call
                     </a>
                   </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                       href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-primary w-100">
+                      className="btn hi-tech-button w-100">
                         Stop By the Shop
                     </a>
                   </div>

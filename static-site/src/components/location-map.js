@@ -9,12 +9,12 @@ const LocationMap = () => {
   const [mapHeight, setMapHeight] = useState(null);
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 979) {
-      if (mapRef.current) {
+    if (mapRef.current) {
+      if (window.innerWidth < 979) {
         setMapHeight(mapRef.current.clientWidth);
+      } else {
+        setMapHeight('100%')
       }
-    } else {
-      setMapHeight('100%')
     }
   });
 

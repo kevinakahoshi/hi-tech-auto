@@ -27,24 +27,28 @@ const Footer = () => (
               className="footer-sitemap d-flex flex-wrap justify-content-between">
               <p>
                 <Link
+                  className="footer-nav-link"
                   to="/">
                   Home
                 </Link>
               </p>
               <p>
                 <Link
+                  className="footer-nav-link"
                   to="/about/">
                   About
                 </Link>
               </p>
               <p>
                 <Link
+                  className="footer-nav-link"
                   to="/services/">
                   Services
                 </Link>
               </p>
               <p>
                 <Link
+                  className="footer-nav-link"
                   to="/contact/">
                   Contact
                 </Link>
@@ -57,6 +61,7 @@ const Footer = () => (
             </h5>
             <p>
               <a
+                className="footer-nav-link"
                 href="+16264481733">
                 626-448-1733
               </a>
@@ -68,7 +73,9 @@ const Footer = () => (
             </h5>
             <p
               className="mb-0">
-              <a href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
+              <a
+                className="footer-nav-link"
+                href="https://goo.gl/maps/FPit6BzCJBE5aPV38"
                 target="_blank"
                 rel="noopener noreferrer">
                   4534 Baldwin Ave,<br/>
