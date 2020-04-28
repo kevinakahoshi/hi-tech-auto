@@ -10,11 +10,7 @@ import {
 import {
   Container,
   Row,
-  Col,
-  // Card,
-  // CardText,
-  // CardBody,
-  // CardTitle
+  Col
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -123,7 +119,7 @@ const IndexPage = () => {
                   Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Sagittis eu volutpat odio facilisis mauris sit. Nisl suscipit adipiscing bibendum est. Adipiscing enim eu turpis egestas pretium aenean pharetra. Aliquam sem et tortor consequat id porta. Volutpat odio facilisis mauris sit. Mattis rhoncus urna neque viverra. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Non arcu risus quis varius. Lacinia at quis risus sed vulputate odio ut enim blandit. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Quisque id diam vel quam elementum.
                 </p>
                 <Link
-                  className="btn btn-primary"
+                  className="btn hi-tech-button"
                   to="/about/">
                     Our Mission
                 </Link>
@@ -143,77 +139,11 @@ const IndexPage = () => {
                 Our Services
               </h1>
             </Col>
-            {/* <Col
-              className="mb-3"
-              lg={4}
-              md={6}
-              sm={12}>
-                <Card
-                  className="service-card-index border rounded bg-white h-100">
-                  <Img
-                    className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[2].childImageSharp.fluid} />
-                  <CardBody>
-                    <CardTitle>
-                      <h3>
-                        Oil Changes
-                      </h3>
-                    </CardTitle>
-                    <CardText>
-                      Ultrices dui sapien eget mi proin sed libero enim.Senectus et netus et malesuada fames.
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col
-                className="mb-3"
-              lg={4}
-              md={6}
-              sm={12}>
-                <Card
-                  className="service-card-index border rounded bg-white h-100">
-                  <Img
-                    className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[3].childImageSharp.fluid} />
-                  <CardBody>
-                    <CardTitle>
-                      <h3>
-                        Tire Rotations
-                      </h3>
-                    </CardTitle>
-                    <CardText>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col
-                className="mb-3"
-                lg={4}
-                md={6}
-                sm={12}>
-                <Card
-                  className="service-card-index border rounded bg-white h-100">
-                  <Img
-                    className="rounded-top image-angle"
-                    fluid={imageData.allFile.nodes[4].childImageSharp.fluid} />
-                  <CardBody>
-                    <CardTitle>
-                      <h3>
-                        Brake Service
-                      </h3>
-                    </CardTitle>
-                    <CardText>
-                      At tellus at urna condimentum mattis pellentesque id nibh.
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </Col> */}
               {serviceCards}
               <Col
               xs={12}>
                 <Link
-                className="btn btn-primary"
+                className="btn hi-tech-button"
                 to="/services/">
                   See All Services
               </Link>
@@ -256,7 +186,7 @@ const IndexPage = () => {
                   </h4>
                   <h5
                     className="text-center mb-0">
-                      Give us a call at <a href="tel:+16264481733">626-448-1733</a>
+                      Give us a call at <a href="tel:+16264481733" className="link">626-448-1733</a>
                   </h5>
                 </Col>
             </Row>

@@ -1,4 +1,6 @@
-import React from "react";
+import React, {
+  useState,
+} from "react";
 import {
   Link,
   useStaticQuery,
@@ -16,7 +18,16 @@ import HeroBanner from '../components/hero-banner';
 import ServiceCard from '../components/service-card';
 
 const Services = () => {
-  const h1Text = 'Services Offered'
+  const [phoneButton, setPhoneButton] = useState(false);
+  const h1Text = 'Services Offered';
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      setPhoneButton(true);
+    } else {
+      setPhoneButton(false);
+    }
+  });
 
   const imageData = useStaticQuery(graphql `
     query ServiceImages {
@@ -131,18 +142,17 @@ const Services = () => {
               <Col
                 xs={12}
                 className="d-flex justify-content-center">
-                {window.innerWidth < 768
+                {phoneButton
                   ? <a
                       href="tel:+16264431788"
-                      className="btn btn-primary m-auto">
+                      className="hi-tech-button btn btn-primary m-auto">
                       Give Us a Call Today
                     </a>
                   : <Link
-                      className="btn btn-primary m-auto"
+                      className="hi-tech-button btn btn-primary m-auto"
                       to='/contact/'>
                         Give Us a Call Today
                     </Link>}
-
               </Col>
             </Row>
           </Container>

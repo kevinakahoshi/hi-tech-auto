@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
             light
             expand="md">
               <Link
-                className="nav-logo"
+                className="link nav-logo"
                 to="/">
                 {siteTitle}
               </Link>
@@ -46,31 +46,31 @@ const Header = ({ siteTitle }) => {
                   <NavItem
                     className="my-2 my-md-0">
                     <Link
-                      className="nav-links d-block"
+                      className="header-nav-link nav-links d-block"
                       to="/">
-                          Home
+                        Home
                     </Link>
                   </NavItem>
                   <NavItem
                     className="my-2 my-md-0 ml-md-3">
                     <Link
-                      className="nav-links d-block"
+                      className="header-nav-link nav-links d-block"
                       to="/about/">
-                          About
+                        About
                     </Link>
                   </NavItem>
-                    <NavItem
-                      className="my-2 my-md-0 ml-md-3">
-                      <Link
-                        className="nav-links d-block"
-                        to="/services/">
-                          Services
-                      </Link>
-                    </NavItem>
                   <NavItem
                     className="my-2 my-md-0 ml-md-3">
                     <Link
-                      className="nav-links d-block"
+                      className="header-nav-link nav-links d-block"
+                      to="/services/">
+                        Services
+                    </Link>
+                  </NavItem>
+                  <NavItem
+                    className="my-2 my-md-0 ml-md-3">
+                    <Link
+                      className="header-nav-link nav-links d-block"
                       to="/contact/">
                         Contact
                     </Link>

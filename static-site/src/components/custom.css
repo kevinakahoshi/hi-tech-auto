@@ -67,9 +67,7 @@ p {
 }
 
 .image-gallery-container:focus {
-  background-color: #0069d9;
-  border-color: #0062cc;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, .5);
+  box-shadow: 0 0 0 0.2rem #f2544b80;
   outline: 0;
 }
 
@@ -116,6 +114,46 @@ p {
 
 .pointer {
   cursor: pointer;
+}
+/* Custom color classes to override Reactstrap */
+.link {
+  color: #f2544b;
+  transition: .3s all;
+  text-decoration: none!important;
+}
+
+.link:hover {
+  color: #ca3f38;
+}
+
+.header-nav-link,
+.footer-nav-link {
+  color: #444444;
+  transition: .3s all;
+  text-decoration: none !important;
+}
+
+.header-nav-link:hover,
+.footer-nav-link:hover {
+  color: #ca3f38;
+}
+
+.hi-tech-button {
+  background-color: #f2544b!important;
+  border-color: #f2544b!important;
+  color: #ffffff!important;
+}
+
+.hi-tech-button:hover {
+  background-color: #ca3f38 !important;
+  border-color: #ca3f38 !important;
+}
+
+.link:focus,
+.header-nav-link:focus,
+.hi-tech-button:focus {
+  box-shadow: 0 0 0 0.2rem #f2544b80!important;
+  outline: 0;
 }
 
 @media (min-width: 992px) {
