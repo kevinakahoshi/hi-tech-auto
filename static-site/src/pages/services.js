@@ -31,7 +31,7 @@ const Services = () => {
 
   const imageData = useStaticQuery(graphql `
     query ServiceImages {
-      allFile(filter: {relativeDirectory: {
+      main: allFile(filter: {relativeDirectory: {
         eq: "services"
       }}) {
         nodes {
@@ -41,6 +41,20 @@ const Services = () => {
               ...GatsbyImageSharpFluid
             }
           }
+          name
+        }
+      }
+      cards: allFile(filter: {relativeDirectory: {
+        eq: "services/service-cards"
+      }}) {
+        nodes {
+          childImageSharp {
+            id
+            fluid(maxWidth: 1920, ) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          name
         }
       }
     }
@@ -51,35 +65,35 @@ const Services = () => {
       id: 1,
       title: 'Oil Change',
       description: 'Urna duis convallis convallis tellus id interdum. Dis parturient montes nascetur ridiculus. In fermentum et sollicitudin ac orci phasellus. Elit eget gravida cum sociis natoque.',
-      image: imageData.allFile.nodes[1].childImageSharp.fluid
+      image: imageData.cards.nodes[5].childImageSharp.fluid
     },
     {
       id: 2,
       title: 'Tire Rotations',
       description: 'Sagittis vitae et leo duis ut diam quam nulla. Quisque egestas diam in arcu cursus euismod quis viverra. Et odio pellentesque diam volutpat commodo sed egestas egestas.',
-      image: imageData.allFile.nodes[2].childImageSharp.fluid
+      image: imageData.cards.nodes[4].childImageSharp.fluid
     },
     {
       id: 3,
       title: 'Brake Service',
       description: 'Aliquet eget sit amet tellus cras. Tellus id interdum velit laoreet id donec ultrices. Tristique magna sit amet purus gravida quis blandit turpis. Sapien et ligula ullamcorper malesuada proin libero nunc. Aliquam sem fringilla ut morbi tincidunt.',
-      image: imageData.allFile.nodes[3].childImageSharp.fluid
+      image: imageData.cards.nodes[1].childImageSharp.fluid
     },
     {
       id: 4,
       title: 'Engine Repair',
       description: 'Vitae et leo duis ut diam. Ac placerat vestibulum lectus mauris. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Consequat interdum varius sit amet mattis vulputate enim. At lectus urna duis convallis convallis tellus id interdum.',
-      image: imageData.allFile.nodes[4].childImageSharp.fluid
+      image: imageData.cards.nodes[2].childImageSharp.fluid
     }, {
       id: 5,
       title: 'Transmission Service',
       description: 'Congue mauris rhoncus aenean vel elit. Quam vulputate dignissim suspendisse in est ante. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Tristique magna sit amet purus gravida quis blandit turpis.',
-      image: imageData.allFile.nodes[5].childImageSharp.fluid
+      image: imageData.cards.nodes[3].childImageSharp.fluid
     }, {
       id: 6,
       title: 'Tune Up',
       description: 'Vitae semper quis lectus nulla at volutpat diam. Ac ut consequat semper viverra nam libero. Iaculis at erat pellentesque adipiscing commodo elit. Praesent elementum facilisis leo vel.',
-      image: imageData.allFile.nodes[6].childImageSharp.fluid
+      image: imageData.cards.nodes[0].childImageSharp.fluid
     }
   ];
 
@@ -105,7 +119,7 @@ const Services = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
-        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.main.nodes[0].childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />
