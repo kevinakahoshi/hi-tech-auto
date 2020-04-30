@@ -116,12 +116,15 @@ const IndexPage = () => {
                   About Hi-Tech Auto
                 </h1>
                 <p>
-                  Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Sagittis eu volutpat odio facilisis mauris sit. Nisl suscipit adipiscing bibendum est. Adipiscing enim eu turpis egestas pretium aenean pharetra. Aliquam sem et tortor consequat id porta. Volutpat odio facilisis mauris sit. Mattis rhoncus urna neque viverra. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Non arcu risus quis varius. Lacinia at quis risus sed vulputate odio ut enim blandit. Sed vulputate mi sit amet mauris commodo quis imperdiet massa. Quisque id diam vel quam elementum.
+                  Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
+                  We have been open since 1995 and specialize in general automotive maintenance and repair.
+                  One thing that we emphasize is that because we're family owned, we treat all of our customers family.
+                  Whether you have a general question or are in need of a tune up, we'd love to hear from you!
                 </p>
                 <Link
                   className="btn hi-tech-button"
                   to="/about/">
-                    Our Mission
+                    Learn More
                 </Link>
             </Col>
           </Row>
