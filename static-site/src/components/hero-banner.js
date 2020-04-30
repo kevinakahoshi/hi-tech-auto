@@ -24,13 +24,13 @@ const HeroBanner = props => {
                     className={`text-center text-white ${props.h2Text
                     ? ''
                     : 'mb-0'}`}>
-                      {props.h1Text}
+                    {props.h1Text}
                   </h1>
                 : null}
               {props.h2Text
                 ? <h2
                     className="text-center text-white mb-0">
-                      {props.h2Text}
+                    {props.h2Text}
                   </h2>
                 : null}
             </Container>
