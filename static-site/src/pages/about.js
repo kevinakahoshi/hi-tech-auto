@@ -53,7 +53,10 @@ const About = () => {
                   What makes Hi-Tech Auto Special?
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet proin fermentum leo vel orci. Sem integer vitae justo eget magna. Egestas maecenas pharetra convallis posuere morbi. Adipiscing elit ut aliquam purus sit amet. A scelerisque purus semper eget duis at tellus at urna. Quis varius quam quisque id. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nisi quis eleifend quam adipiscing vitae. Enim blandit volutpat maecenas volutpat. Id neque aliquam vestibulum morbi blandit cursus risus.
+                  Hi-Tech Auto focuses on provideing the best possible service at the best possible price.
+                  Since we are family owned, we always treat our customers like we would a family member stopping by.
+                  Many of our customers are repeat customers that have been coming to us for years, and that is because we treat them like family.
+                  Hi-Tech Auto has been open since 2001, and we have always made it a point to be honest with our customers since opening.
                 </p>
               </Col>
             </Row>
@@ -68,7 +71,7 @@ const About = () => {
                 xs={12}>
                   <h3
                     className="text-white text-center mb-3">
-                    Our Value Props
+                    Our Value
                   </h3>
               </Col>
               <Col

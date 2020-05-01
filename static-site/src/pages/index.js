@@ -60,19 +60,19 @@ const IndexPage = () => {
     {
       id: 1,
       title: 'Oil Change',
-      description: 'Urna duis convallis convallis tellus id interdum. Dis parturient montes nascetur ridiculus. In fermentum et sollicitudin ac orci phasellus. Elit eget gravida cum sociis natoque.',
+      description: 'Overdue for a simple oil change?  Stop in or give us a call so that we can service your vehicle.',
       image: imageData.allFile.nodes[1].childImageSharp.fluid
     },
     {
       id: 2,
       title: 'Tire Rotations',
-      description: 'Sagittis vitae et leo duis ut diam quam nulla. Quisque egestas diam in arcu cursus euismod quis viverra. Et odio pellentesque diam volutpat commodo sed egestas egestas.',
+      description: 'It\'s important to have your car\'s tires rotated periodically in order to preserve their longevity.  Come by the shop to have your tires rotated.',
       image: imageData.allFile.nodes[2].childImageSharp.fluid
     },
     {
       id: 3,
       title: 'Brake Service',
-      description: 'Aliquet eget sit amet tellus cras. Tellus id interdum velit laoreet id donec ultrices. Tristique magna sit amet purus gravida quis blandit turpis. Sapien et ligula ullamcorper malesuada proin libero nunc. Aliquam sem fringilla ut morbi tincidunt.',
+      description: 'Don\'t get caught in a situation where your brakes are not functioning like they should.  We are equipped to perform pad and rotor replacements so that you can drive safely.',
       image: imageData.allFile.nodes[3].childImageSharp.fluid
     }
   ];
@@ -117,7 +117,7 @@ const IndexPage = () => {
                 </h1>
                 <p>
                   Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
-                  We have been open since 1995 and specialize in general automotive maintenance and repair.
+                  We have been open since 2001 and specialize in general automotive maintenance and repair.
                   One thing that we emphasize is that because we're family owned, we treat all of our customers family.
                   Whether you have a general question or are in need of a tune up, we'd love to hear from you!
                 </p>
