@@ -53,7 +53,7 @@ const About = () => {
                   What makes Hi-Tech Auto Special?
                 </h3>
                 <p>
-                  Hi-Tech Auto focuses on provideing the best possible service at the best possible price.
+                  Hi-Tech Auto focuses on providing the best possible service at the best possible price.
                   Since we are family owned, we always treat our customers like we would a family member stopping by.
                   Many of our customers are repeat customers that have been coming to us for years, and that is because we treat them like family.
                   Hi-Tech Auto has been open since 2001, and we have always made it a point to be honest with our customers since opening.

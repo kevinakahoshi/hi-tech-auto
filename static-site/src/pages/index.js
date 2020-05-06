@@ -82,7 +82,6 @@ const IndexPage = () => {
       return (
         <Col
           xs={12}
-          md={6}
           lg={4}
           className="mb-4"
           key={service.id}>
