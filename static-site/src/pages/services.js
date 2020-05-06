@@ -63,26 +63,26 @@ const Services = () => {
   const listOfServices = [
     {
       id: 1,
-      title: 'Oil Change',
-      description: 'Urna duis convallis convallis tellus id interdum. Dis parturient montes nascetur ridiculus. In fermentum et sollicitudin ac orci phasellus. Elit eget gravida cum sociis natoque.',
-      image: imageData.cards.nodes[5].childImageSharp.fluid
+      title: 'Brake Service',
+      description: 'Your brakes are one of the most critical components on your vehicle that will keep you, your passengers, and others on the road safe.  If your brakes are showing signs of wear, or are making squealing or grinding noises, give us a call today!',
+      image: imageData.cards.nodes[1].childImageSharp.fluid
     },
     {
       id: 2,
       title: 'Tire Rotations',
-      description: 'Sagittis vitae et leo duis ut diam quam nulla. Quisque egestas diam in arcu cursus euismod quis viverra. Et odio pellentesque diam volutpat commodo sed egestas egestas.',
+      description: 'Your tires are another component that is critical for keeping you safe on the road.  Rotating them regularly will help preserve their longevity, and keep you planted on the road, in control.',
       image: imageData.cards.nodes[4].childImageSharp.fluid
     },
     {
       id: 3,
-      title: 'Brake Service',
-      description: 'Aliquet eget sit amet tellus cras. Tellus id interdum velit laoreet id donec ultrices. Tristique magna sit amet purus gravida quis blandit turpis. Sapien et ligula ullamcorper malesuada proin libero nunc. Aliquam sem fringilla ut morbi tincidunt.',
-      image: imageData.cards.nodes[1].childImageSharp.fluid
+      title: 'Oil Change',
+      description: 'Preventative maintenance will help keep your car\'s engine running strong for years to come by keeping your internal components lubricated and friction free.  Contact us about your next oil change.',
+      image: imageData.cards.nodes[5].childImageSharp.fluid
     },
     {
       id: 4,
       title: 'Engine Repair',
-      description: 'Vitae et leo duis ut diam. Ac placerat vestibulum lectus mauris. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Consequat interdum varius sit amet mattis vulputate enim. At lectus urna duis convallis convallis tellus id interdum.',
+      description: 'Is your Check Engine Light on?  If so, it\'s time to get that checked out by a professional.  We are well equipped to diagnose and address any engine issues that you may be facing, and we are here to help.  Stop by today to see what may be wrong.',
       image: imageData.cards.nodes[2].childImageSharp.fluid
     }, {
       id: 5,
