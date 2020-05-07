@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from './footer';
+// import MessageBanner from './message-banner';
 import "./layout.css";
 import "./custom.css";
 
@@ -23,13 +24,17 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <Header
         siteTitle={data.site.siteMetadata.title} />
         <main>
+        {/* {closeMessageBanner
+          ? null
+          : <MessageBanner
+              closeBar={closeBar} />} */}
           {children}
         </main>
       <Footer />

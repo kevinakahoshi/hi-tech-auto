@@ -50,7 +50,7 @@ const Services = () => {
         nodes {
           childImageSharp {
             id
-            fluid(maxWidth: 1920, ) {
+            fluid(maxWidth: 508, ) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -76,7 +76,7 @@ const Services = () => {
     {
       id: 3,
       title: 'Oil Change',
-      description: 'Preventative maintenance will help keep your car\'s engine running strong for years to come by keeping your internal components lubricated and friction free.  Contact us about your next oil change.',
+      description: 'Oil changes will help keep your car\'s engine running strong for years to come by keeping your internal components lubricated and friction free.  Contact us about your next oil change.',
       image: imageData.cards.nodes[5].childImageSharp.fluid
     },
     {
@@ -87,12 +87,12 @@ const Services = () => {
     }, {
       id: 5,
       title: 'Transmission Service',
-      description: 'Congue mauris rhoncus aenean vel elit. Quam vulputate dignissim suspendisse in est ante. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Tristique magna sit amet purus gravida quis blandit turpis.',
+      description: 'If you notice that your transmission is slipping or changing gears is jerky, it\'s time to look into why.  Transmission problems can leave you stranded on the side of the road, so contact us at the first signs of your transmission acting strangely.',
       image: imageData.cards.nodes[3].childImageSharp.fluid
     }, {
       id: 6,
       title: 'Tune Up',
-      description: 'Vitae semper quis lectus nulla at volutpat diam. Ac ut consequat semper viverra nam libero. Iaculis at erat pellentesque adipiscing commodo elit. Praesent elementum facilisis leo vel.',
+      description: 'Preventative maintenance like changing your fluids, checking/replacing your battery, or changing your spark plugs is an easy way to keep your car from breaking down over time.  If you\'re in need of a tune up, give us a call or stop by today.',
       image: imageData.cards.nodes[0].childImageSharp.fluid
     }
   ];
