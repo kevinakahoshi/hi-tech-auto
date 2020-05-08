@@ -13,7 +13,7 @@ const MessageBanner = (props) => {
       <Row>
         <Col>
           <div
-            className="d-flex justify-content-center p-3">
+            className="d-flex justify-content-center py-3">
               <p
                 className="my-auto mr-3 text-white">
                 Due to COVID-19, we are temporarily closed.  Thank you for understanding.

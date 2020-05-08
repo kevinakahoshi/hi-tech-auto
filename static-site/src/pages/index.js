@@ -42,7 +42,7 @@ const IndexPage = () => {
   const imageData = useStaticQuery(graphql`
     query AllImages {
       hero: allFile(filter: {relativeDirectory: {
-        eq: "home"
+        eq: "home/hero"
       }}) {
         nodes {
           childImageSharp {
@@ -55,13 +55,27 @@ const IndexPage = () => {
       }
       cards: allFile(filter: {
         relativeDirectory: {
-          eq: "home"
+          eq: "home/service-cards"
         }
       }) {
         nodes {
           childImageSharp {
             id
             fluid(maxWidth: 508, ) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      gallery: allFile(filter: {
+        relativeDirectory: {
+          eq: "home/gallery"
+        }
+      }) {
+        nodes {
+          childImageSharp {
+            id
+            fluid(maxWidth: 1920, ) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -75,19 +89,19 @@ const IndexPage = () => {
       id: 1,
       title: 'Oil Change',
       description: 'Overdue for a simple oil change?  Stop in or give us a call so that we can service your vehicle.',
-      image: imageData.cards.nodes[1].childImageSharp.fluid
+      image: imageData.cards.nodes[2].childImageSharp.fluid
     },
     {
       id: 2,
       title: 'Tire Rotations',
       description: 'It\'s important to have your car\'s tires rotated periodically in order to preserve their longevity.  Come by the shop to have your tires rotated.',
-      image: imageData.cards.nodes[2].childImageSharp.fluid
+      image: imageData.cards.nodes[1].childImageSharp.fluid
     },
     {
       id: 3,
       title: 'Brake Service',
       description: 'Don\'t get caught in a situation where your brakes are not functioning like they should.  We are equipped to perform pad and rotor replacements so that you can drive safely.',
-      image: imageData.cards.nodes[3].childImageSharp.fluid
+      image: imageData.cards.nodes[0].childImageSharp.fluid
     }
   ];
 
@@ -113,7 +127,7 @@ const IndexPage = () => {
       <SEO
         title="Home" />
       <HeroBanner
-        heroImage={imageData.hero.nodes[1].childImageSharp.fluid}
+        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
         h1Text={h1Text}
         h2Text={h2Text}
         index={true} />
@@ -177,7 +191,7 @@ const IndexPage = () => {
             noGutters={true}>
               <Gallery
                 toggle={toggle}
-                galleryImages={imageData.hero.nodes} />
+                galleryImages={imageData.gallery.nodes} />
               <ImageModal
                 toggle={toggle}
                 modal={modal}
@@ -185,7 +199,7 @@ const IndexPage = () => {
               <div
                 className="d-block d-sm-none">
                 <ImageCarousel
-                  carouselImages={imageData.hero.nodes} />
+                  carouselImages={imageData.gallery.nodes} />
               </div>
           </Row>
         </Container>
