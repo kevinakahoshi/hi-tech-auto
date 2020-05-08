@@ -20,7 +20,7 @@ const NotFoundPage = () => {
   const imageData = useStaticQuery(graphql `
     query NotFound {
       hero: allFile(filter: {relativeDirectory: {
-        eq: "contact"
+        eq: "404/hero"
       }}) {
         nodes {
           childImageSharp {

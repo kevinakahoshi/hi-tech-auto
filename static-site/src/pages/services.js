@@ -31,8 +31,8 @@ const Services = () => {
 
   const imageData = useStaticQuery(graphql `
     query ServiceImages {
-      main: allFile(filter: {relativeDirectory: {
-        eq: "services"
+      hero: allFile(filter: {relativeDirectory: {
+        eq: "services/hero"
       }}) {
         nodes {
           childImageSharp {
@@ -119,7 +119,7 @@ const Services = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
-        heroImage={imageData.main.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />
@@ -136,6 +136,8 @@ const Services = () => {
                 <p>
                   Hi-Tech Auto specializes in general automotive maintenance and repair.
                   We can service a wide range of makes and models, and are equipped to handle a broad range of services quickly and easily.
+                  Our ASE Certified technicians have over 25 years of experience, and are ready to handle your maintenance and repair needs.
+                  Call today to inquire!
                 </p>
               </Col>
             </Row>

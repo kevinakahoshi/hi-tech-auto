@@ -19,8 +19,8 @@ const About = () => {
 
   const imageData = useStaticQuery(graphql `
     query AboutImages {
-      allFile(filter: {relativeDirectory: {
-        eq: "about"
+      hero: allFile(filter: {relativeDirectory: {
+        eq: "about/hero"
       }}) {
         nodes {
           childImageSharp {
@@ -38,7 +38,7 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
-        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />

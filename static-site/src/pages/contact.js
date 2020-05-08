@@ -18,8 +18,8 @@ const Contact = () => {
 
   const imageData = useStaticQuery(graphql `
     query ContactImages {
-      allFile(filter: {relativeDirectory: {
-        eq: "contact"
+      hero: allFile(filter: {relativeDirectory: {
+        eq: "contact/hero"
       }}) {
         nodes {
           childImageSharp {
@@ -37,7 +37,7 @@ const Contact = () => {
     <Layout>
       <SEO title="Contact" />
       <HeroBanner
-        heroImage={imageData.allFile.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />
