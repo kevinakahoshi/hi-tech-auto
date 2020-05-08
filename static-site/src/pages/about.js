@@ -53,10 +53,11 @@ const About = () => {
                   What makes Hi-Tech Auto Special?
                 </h3>
                 <p>
-                  Hi-Tech Auto focuses on providing the best possible service at the best possible price.
-                  Since we are family owned, we always treat our customers like we would a family member stopping by.
-                  Many of our customers are repeat customers that have been coming to us for years, and that is because we treat them like family.
-                  Hi-Tech Auto has been open since 2001, and we have always made it a point to be honest with our customers since opening.
+                  Hi-Tech Auto opened its doors in 2001 and has been serving the community for almost 20 years.
+                  We are a family owned business and we strive to provide excellent service to each of our customers.
+                  Hi-Tech auto provides a variety of mechanic services from tune ups to transmission repair.
+                  We're proud to be able to serve our local community, and that many of our customers choose to help support us.
+                  If you are ever in need of anything ranging from a simple tune up to transmission service, we are here to help.
                 </p>
               </Col>
             </Row>

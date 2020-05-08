@@ -10,6 +10,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroBanner from '../components/hero-banner';
 import {
+  Link,
   useStaticQuery,
   graphql
 } from "gatsby";
@@ -44,6 +45,19 @@ const NotFoundPage = () => {
         h1Text={h1Text}
         h2Text={h2Text}
         index={false} />
+      <Container
+        className="bg-white py-5">
+        <Row>
+          <Col
+            className="d-flex justify-content-center">
+            <Link
+              className="btn hi-tech-button"
+              to="/">
+                Return Home
+            </Link>
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   )
 }
