@@ -6,7 +6,6 @@ import {
   useStaticQuery,
   graphql
 } from "gatsby"
-// import Img from "gatsby-image";
 import {
   Container,
   Row,
