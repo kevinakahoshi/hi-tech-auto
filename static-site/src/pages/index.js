@@ -204,6 +204,7 @@ const IndexPage = () => {
         </Container>
       </section>
       <section
+        id="contact"
         className="bg-white py-5">
           <Container>
             <Row>
