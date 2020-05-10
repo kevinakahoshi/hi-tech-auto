@@ -115,9 +115,13 @@ p {
 
 .close-button {
   z-index: 1100;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   line-height: 1.5rem;
+}
+
+.modal-body {
+  padding: .25rem!important
 }
 
 .footer-sitemap > * {
