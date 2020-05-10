@@ -10,7 +10,7 @@ import Img from "gatsby-image";
 
 const Gallery = props => {
   const galleryRef = useRef();
-  const [imageHeight, setImageHeight] = useState('25vw');
+  const [imageHeight, setImageHeight] = useState(null);
 
   window.addEventListener('resize', () => {
     if (galleryRef.current) {
@@ -19,12 +19,8 @@ const Gallery = props => {
   });
 
   useEffect(() => {
-    if (!galleryRef.current) {
-      return setImageHeight('25vw');
-    } else {
-      if (window.innerWidth > 768) {
-        return setImageHeight(galleryRef.current.imageRef.current.width);
-      }
+    if (window.innerWidth > 768) {
+      return setImageHeight(galleryRef.current.imageRef.current.width);
     }
   }, []);
 
@@ -40,13 +36,18 @@ const Gallery = props => {
             tabIndex="0"
             onKeyPress={() => props.toggle(image.childImageSharp.fluid)}
             onClick={() => props.toggle(image.childImageSharp.fluid)}
+            style={{ height: imageHeight }}
             className="image-gallery-container">
             <Img
-              loading="lazy"
+              loading={"lazy"}
+              durationFadeIn={100}
               ref={galleryRef}
-              style={{ height: imageHeight }}
+              style={{ height: imageHeight}}
+              onLoad={() => {
+                setImageHeight(galleryRef.current.imageRef.current.width)
+              }}
               fluid={image.childImageSharp.fluid}
-              className="gallery-image pointer" />
+              className="image-gallery-container gallery-image pointer" />
           </div>
       </Col>
     )});
