@@ -20,8 +20,6 @@ const Logo = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <Img
       backgroundColor="#ffffff"

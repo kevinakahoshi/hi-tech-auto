@@ -1,5 +1,5 @@
 import React, {
-  createRef,
+  useRef,
   useState,
   useEffect
 } from 'react';
@@ -9,8 +9,8 @@ import {
 import Img from "gatsby-image";
 
 const Gallery = props => {
-  const galleryRef = createRef(null);
-  const [imageHeight, setImageHeight] = useState(null);
+  const galleryRef = useRef();
+  const [imageHeight, setImageHeight] = useState('25vw');
 
   window.addEventListener('resize', () => {
     if (galleryRef.current) {
@@ -20,11 +20,13 @@ const Gallery = props => {
 
   useEffect(() => {
     if (!galleryRef.current) {
-      galleryRef.current = true;
+      return setImageHeight('25vw');
     } else {
-      setImageHeight(galleryRef.current.imageRef.current.width);
+      if (window.innerWidth > 768) {
+        return setImageHeight(galleryRef.current.imageRef.current.width);
+      }
     }
-  }, [galleryRef]);
+  }, []);
 
   return props.galleryImages.map((image, index) => {
     return (
@@ -40,15 +42,14 @@ const Gallery = props => {
             onClick={() => props.toggle(image.childImageSharp.fluid)}
             className="image-gallery-container">
             <Img
-              onClick={() => props.toggle(image.childImageSharp.fluid)}
-              ref={galleryRef}
               loading="lazy"
-              style={{ minHeight: imageHeight }}
+              ref={galleryRef}
+              style={{ height: imageHeight }}
               fluid={image.childImageSharp.fluid}
               className="gallery-image pointer" />
           </div>
       </Col>
-      )});
+    )});
 }
 
 export default Gallery;

@@ -168,6 +168,14 @@ p {
   outline: 0;
 }
 
+.message-banner {
+  background: #f2544b;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 @media (min-width: 992px) {
   .footer-boxes {
     height: 100%;
