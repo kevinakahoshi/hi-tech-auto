@@ -20,7 +20,8 @@ const Footer = () => (
           xs={12}>
           <div
             className="footer-boxes p-3 mb-3 mb-md-0 border rounded">
-            <h5>
+            <h5
+              className="h4">
               Sitemap
             </h5>
             <div
@@ -56,7 +57,8 @@ const Footer = () => (
             </div>
             <div
               className="dropdown-divider mt-0 mb-3"></div>
-            <h5>
+            <h5
+              className="h4">
               Phone
             </h5>
             <p>
@@ -68,7 +70,8 @@ const Footer = () => (
             </p>
             <div
               className="dropdown-divider mt-0 mb-3"></div>
-            <h5>
+            <h5
+              className="h4">
               Address
             </h5>
             <p
@@ -90,7 +93,8 @@ const Footer = () => (
           xs={12}>
           <div
             className="footer-boxes p-3 mb-3 mb-lg-0 border rounded">
-            <h5>
+            <h5
+              className="h4">
               Hours
             </h5>
             <div>

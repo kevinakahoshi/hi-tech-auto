@@ -38,31 +38,53 @@ const IndexPage = () => {
     setModal(!modal)
   };
 
-  const imageData = useStaticQuery(graphql`
-    query AllImages {
-      hero: allFile(filter: {relativeDirectory: {
+  const imageData = useStaticQuery(graphql `
+    query IndexImages {
+      hero: file(relativeDirectory: {
         eq: "home/hero"
-      }}) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920,) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+      }, name: {
+        eq: "hero"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      cards: allFile(filter: {
-        relativeDirectory: {
-          eq: "home/service-cards"
-        }
+      oilChange: file(relativeDirectory: {
+        eq: "home/service-cards"
+      }, name: {
+        eq: "oil-changes"
       }) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 508, ) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      tireRotations: file(relativeDirectory: {
+        eq: "home/service-cards"
+      }, name: {
+        eq: "tire-rotation"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      brakeService: file(relativeDirectory: {
+        eq: "home/service-cards"
+      }, name: {
+        eq: "brake-service"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -74,11 +96,10 @@ const IndexPage = () => {
         nodes {
           childImageSharp {
             id
-            fluid(maxWidth: 1920, ) {
+            fluid(maxWidth: 1170, ) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
-          name
         }
       }
     }
@@ -89,19 +110,19 @@ const IndexPage = () => {
       id: 1,
       title: 'Oil Change',
       description: 'Overdue for a simple oil change?  Stop in or give us a call so that we can service your vehicle.',
-      image: imageData.cards.nodes[2].childImageSharp.fluid
+      image: imageData.oilChange.childImageSharp.fluid
     },
     {
       id: 2,
       title: 'Tire Rotations',
       description: 'It\'s important to have your car\'s tires rotated periodically in order to preserve their longevity.  Come by the shop to have your tires rotated.',
-      image: imageData.cards.nodes[1].childImageSharp.fluid
+      image: imageData.tireRotations.childImageSharp.fluid
     },
     {
       id: 3,
       title: 'Brake Service',
       description: 'Don\'t get caught in a situation where your brakes are not functioning like they should.  We are equipped to perform pad and rotor replacements so that you can drive safely.',
-      image: imageData.cards.nodes[0].childImageSharp.fluid
+      image: imageData.brakeService.childImageSharp.fluid
     }
   ];
 
@@ -127,7 +148,7 @@ const IndexPage = () => {
       <SEO
         title="Home" />
       <HeroBanner
-        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.childImageSharp.fluid}
         h1Text={h1Text}
         h2Text={h2Text}
         index={true} />
@@ -139,9 +160,10 @@ const IndexPage = () => {
           <Row>
             <Col
               xs={12}>
-                <h1>
+                <h3
+                  className="h1">
                   About Hi-Tech Auto
-                </h1>
+                </h3>
                 <p>
                   Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
                   We have been open since 2001 and specialize in general automotive maintenance and repair.
@@ -165,9 +187,10 @@ const IndexPage = () => {
           <Row>
             <Col
               xs={12}>
-              <h1>
+              <h3
+                className="h1">
                 Our Services
-              </h1>
+              </h3>
             </Col>
               {serviceCards}
               <Col

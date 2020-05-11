@@ -19,15 +19,15 @@ import {
 const NotFoundPage = () => {
   const imageData = useStaticQuery(graphql `
     query NotFound {
-      hero: allFile(filter: {relativeDirectory: {
+      hero: file(relativeDirectory: {
         eq: "404/hero"
-      }}) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920,) {
-              ...GatsbyImageSharpFluid
-            }
+      }, name: {
+        eq: "hero"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -41,7 +41,7 @@ const NotFoundPage = () => {
     <Layout>
       <SEO title="404: Not found" />
       <HeroBanner
-        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.childImageSharp.fluid}
         h1Text={h1Text}
         h2Text={h2Text}
         index={false} />
