@@ -30,6 +30,7 @@ const Header = () => {
             light
             expand="md">
               <Link
+                aria-label="Hi-Tech Auto Logo"
                 className="link nav-logo d-flex"
                 to="/">
                   <Logo />

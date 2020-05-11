@@ -8,25 +8,26 @@ const LocationMap = () => {
   const mapRef = createRef(null);
   const [mapHeight, setMapHeight] = useState(null);
 
-  window.addEventListener('resize', () => {
-    if (mapRef.current) {
-      if (window.innerWidth < 979) {
-        setMapHeight(mapRef.current.clientWidth);
-      } else {
-        setMapHeight('100%')
-      }
-    }
-  });
 
   useEffect(() => {
-    if (!mapRef.current) {
-      mapRef.current = true;
-    } else {
-      if (window.innerWidth < 979) {
-        setMapHeight(mapRef.current.clientWidth);
-      } else {
-        setMapHeight('100%');
+    global.addEventListener('resize', () => {
+      if (mapRef.current) {
+        if (global.innerWidth < 992) {
+          setMapHeight(mapRef.current.clientWidth);
+        } else {
+          setMapHeight('100%')
+        }
       }
+    });
+
+    if (global.innerWidth < 992) {
+      setMapHeight(mapRef.current.clientWidth);
+    } else {
+      setMapHeight('100%');
+    }
+
+    return () => {
+      global.removeEventListener('resize', () => {});
     }
   }, [mapRef]);
 

@@ -12,17 +12,17 @@ const Gallery = props => {
   const galleryRef = useRef();
   const [imageHeight, setImageHeight] = useState(null);
 
-  window.addEventListener('resize', () => {
-    if (galleryRef.current) {
-      setImageHeight(galleryRef.current.imageRef.current.width);
+  useEffect(() => {
+    global.addEventListener('resize', () => {
+      if (galleryRef.current) {
+        setImageHeight(galleryRef.current.imageRef.current.width);
+      }
+    });
+
+    return () => {
+      global.removeEventListener('resize', () => {});
     }
   });
-
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      return setImageHeight(galleryRef.current.imageRef.current.width);
-    }
-  }, []);
 
   return props.galleryImages.map((image, index) => {
     return (
@@ -33,11 +33,12 @@ const Gallery = props => {
         className="d-none d-sm-block">
           <div
             role="button"
+            aria-label={`View ${image.name} photo.`}
             tabIndex="0"
             onKeyPress={() => props.toggle(image.childImageSharp.fluid)}
             onClick={() => props.toggle(image.childImageSharp.fluid)}
             style={{ height: imageHeight }}
-            className="image-gallery-container">
+            className="image-gallery-container pointer">
             <Img
               loading={"lazy"}
               durationFadeIn={100}

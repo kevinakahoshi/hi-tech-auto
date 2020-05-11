@@ -12,7 +12,7 @@ const Logo = () => {
           childImageSharp {
             id
             fixed(width: 200, ) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
@@ -22,7 +22,8 @@ const Logo = () => {
 
   return (
     <Img
-      backgroundColor="#ffffff"
+      loading={"eager"}
+      fadeIn={true}
       fixed={data.logo.nodes[0].childImageSharp.fixed} />
   );
 }

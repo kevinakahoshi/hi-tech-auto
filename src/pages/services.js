@@ -1,5 +1,6 @@
 import React, {
   useState,
+  useEffect
 } from "react";
 import {
   Link,
@@ -21,11 +22,17 @@ const Services = () => {
   const [phoneButton, setPhoneButton] = useState(false);
   const h1Text = 'Services Offered';
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-      setPhoneButton(true);
-    } else {
-      setPhoneButton(false);
+  useEffect(() => {
+    global.addEventListener('resize', () => {
+      if (global.innerWidth < 768) {
+        setPhoneButton(true);
+      } else {
+        setPhoneButton(false);
+      }
+    });
+
+    return () => {
+      global.removeEventListener('resize', () => {});
     }
   });
 

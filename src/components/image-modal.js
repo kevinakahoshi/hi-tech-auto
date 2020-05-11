@@ -12,7 +12,8 @@ const ImageModal = (props) => {
       isOpen={props.modal}
       toggle={props.toggle}
       centered={true}
-      size="xl">
+      size="xl"
+      className="tablet-modal-dialog">
       <ModalBody
         className="position-relative">
           <Button

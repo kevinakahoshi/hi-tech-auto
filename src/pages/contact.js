@@ -51,9 +51,6 @@ const Contact = () => {
                 <h3>
                   Want to get in touch with us?
                 </h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
               </Col>
               <Col
                 xs={12}

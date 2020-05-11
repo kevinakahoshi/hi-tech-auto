@@ -13,14 +13,14 @@ const MessageBanner = (props) => {
       <Row>
         <Col
           xs={0}
-          sm={2} />
+          md={2} />
         <Col
           xs={10}
-          sm={8}>
+          md={8}>
             <div
               className="d-flex justify-content-sm-center justify-content-start">
               <small
-                className="text-white text-center my-auto">
+                className="text-white text-md-center my-auto">
                 Due to COVID-19, we are temporarily closed.  Thank you for understanding.
               </small>
             </div>
