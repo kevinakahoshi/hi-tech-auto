@@ -1,5 +1,7 @@
 import React from 'react';
 import MessageBanner from './message-banner';
+import Header from './header';
+import Footer from './footer';
 
 const MessageBannerWrapper = ({ children }) => {
   const [closeMessageBanner, setCloseMessageBanner] = React.useState(false);
@@ -13,8 +15,10 @@ const MessageBannerWrapper = ({ children }) => {
       {closeMessageBanner
         ? null
         : <MessageBanner
-            closeBar={closeBar} />}
+        closeBar={closeBar} />}
+      <Header />
       {children}
+      <Footer />
     </>
   )
 };

@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'Inter';
   src: url('../assets/Inter-Light-slnt=0.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter-Heading';
-  src: url('../assets/Inter-Regular-slnt=0.ttf')
+  src: url('../assets/Inter-Regular-slnt=0.ttf');
+  font-display: swap;
 }
 
 /* Reactstrap modal keeps making the sticky navigation disappear */
@@ -18,7 +20,7 @@ body {
   font-family: 'Inter-Heading', sans-serif;
 }
 
-p, a {
+p, a, small, button {
   font-family: 'Inter', sans-serif;
 }
 
@@ -83,14 +85,6 @@ p {
   outline: 0;
 }
 
-.nav-logo:focus,
-.navbar-toggler:focus,
-.nav-links:focus {
-  border-color: #0062cc;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, .5);
-  outline: 0;
-}
-
 .value-props {
   border: 1px solid transparent;
   transition: .3s all;
@@ -133,13 +127,13 @@ p {
 }
 /* Custom color classes to override Reactstrap */
 .link {
-  color: #f2544b;
+  color: #ca3f38;
   transition: .3s all;
   text-decoration: none!important;
 }
 
 .link:hover {
-  color: #ca3f38;
+  color: #f2544b;
 }
 
 .header-nav-link,
@@ -151,29 +145,30 @@ p {
 
 .header-nav-link:hover,
 .footer-nav-link:hover {
-  color: #ca3f38;
+  color: #f2544b;
 }
 
 .hi-tech-button {
-  background-color: #f2544b!important;
-  border-color: #f2544b!important;
+  background-color: #ca3f38!important;
+  border-color: #ca3f38!important;
   color: #ffffff!important;
 }
 
 .hi-tech-button:hover {
-  background-color: #ca3f38 !important;
-  border-color: #ca3f38 !important;
+  background-color: #f2544b !important;
+  border-color: #f2544b !important;
 }
 
 .link:focus,
 .header-nav-link:focus,
-.hi-tech-button:focus {
+.hi-tech-button:focus,
+footer a:focus {
   box-shadow: 0 0 0 0.2rem #f2544b80!important;
   outline: 0;
 }
 
 .message-banner {
-  background: #f2544b;
+  background: #ca3f38;
 }
 
 .pointer {
@@ -183,6 +178,13 @@ p {
 @media (min-width: 992px) {
   .footer-boxes {
     height: 100%;
+  }
+}
+
+/* Custom modal size for tablets */
+@media (min-width: 576px) and (max-width: 991px) {
+  .tablet-modal-dialog {
+    min-width: calc(100% - 3.5rem)!important;
   }
 }
 

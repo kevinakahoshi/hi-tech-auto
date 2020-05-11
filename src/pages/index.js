@@ -47,7 +47,7 @@ const IndexPage = () => {
           childImageSharp {
             id
             fluid(maxWidth: 1920,) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -61,7 +61,7 @@ const IndexPage = () => {
           childImageSharp {
             id
             fluid(maxWidth: 508, ) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -75,9 +75,10 @@ const IndexPage = () => {
           childImageSharp {
             id
             fluid(maxWidth: 1920, ) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
+          name
         }
       }
     }
@@ -150,7 +151,7 @@ const IndexPage = () => {
                 <Link
                   className="btn hi-tech-button"
                   to="/about/">
-                    Learn More
+                    More About Us
                 </Link>
             </Col>
           </Row>
