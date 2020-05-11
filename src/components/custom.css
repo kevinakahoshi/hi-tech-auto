@@ -10,6 +10,12 @@
   font-display: swap;
 }
 
+html {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
 /* Reactstrap modal keeps making the sticky navigation disappear */
 body {
   overflow: initial!important;

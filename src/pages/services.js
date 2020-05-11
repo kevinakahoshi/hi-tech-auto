@@ -38,30 +38,88 @@ const Services = () => {
 
   const imageData = useStaticQuery(graphql `
     query ServiceImages {
-      hero: allFile(filter: {relativeDirectory: {
+      hero: file(relativeDirectory: {
         eq: "services/hero"
-      }}) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920,) {
-              ...GatsbyImageSharpFluid
-            }
+      }, name: {
+        eq: "hero"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
-          name
         }
       }
-      cards: allFile(filter: {relativeDirectory: {
+      brakeService: file(relativeDirectory: {
         eq: "services/service-cards"
-      }}) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 508, ) {
-              ...GatsbyImageSharpFluid
-            }
+      }, name: {
+        eq: "brake-service"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
-          name
+        }
+      }
+      tireRotations: file(relativeDirectory: {
+        eq: "services/service-cards"
+      }, name: {
+        eq: "tire-rotations"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      oilChanges: file(relativeDirectory: {
+        eq: "services/service-cards"
+      }, name: {
+        eq: "oil-changes"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      engineRepair: file(relativeDirectory: {
+        eq: "services/service-cards"
+      }, name: {
+        eq: "engine-repair"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      transmissionService: file(relativeDirectory: {
+        eq: "services/service-cards"
+      }, name: {
+        eq: "transmission-service"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      tuneUp: file(relativeDirectory: {
+        eq: "services/service-cards"
+      }, name: {
+        eq: "tune-up"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
         }
       }
     }
@@ -69,38 +127,38 @@ const Services = () => {
 
   const listOfServices = [
     {
-      id: 1,
+      id: imageData.brakeService.id,
       title: 'Brake Service',
       description: 'Your brakes are one of the most critical components on your vehicle that will keep you, your passengers, and others on the road safe.  If your brakes are showing signs of wear, or are making squealing or grinding noises, give us a call today!',
-      image: imageData.cards.nodes[1].childImageSharp.fluid
+      image: imageData.brakeService.childImageSharp.fluid
     },
     {
-      id: 2,
+      id: imageData.tireRotations.id,
       title: 'Tire Rotations',
       description: 'Your tires are another component that is critical for keeping you safe on the road.  Rotating them regularly will help preserve their longevity, and keep you planted on the road, in control.',
-      image: imageData.cards.nodes[4].childImageSharp.fluid
+      image: imageData.tireRotations.childImageSharp.fluid
     },
     {
-      id: 3,
-      title: 'Oil Change',
+      id: imageData.oilChanges.id,
+      title: 'Oil Changes',
       description: 'Oil changes will help keep your car\'s engine running strong for years to come by keeping your internal components lubricated and friction free.  Contact us about your next oil change.',
-      image: imageData.cards.nodes[5].childImageSharp.fluid
+      image: imageData.oilChanges.childImageSharp.fluid
     },
     {
-      id: 4,
+      id: imageData.engineRepair.id,
       title: 'Engine Repair',
       description: 'Is your Check Engine Light on?  If so, it\'s time to get that checked out by a professional.  We are well equipped to diagnose and address any engine issues that you may be facing, and we are here to help.  Stop by today to see what may be wrong.',
-      image: imageData.cards.nodes[2].childImageSharp.fluid
+      image: imageData.engineRepair.childImageSharp.fluid
     }, {
-      id: 5,
+      id: imageData.transmissionService.id,
       title: 'Transmission Service',
       description: 'If you notice that your transmission is slipping or changing gears is jerky, it\'s time to look into why.  Transmission problems can leave you stranded on the side of the road, so contact us at the first signs of your transmission acting strangely.',
-      image: imageData.cards.nodes[3].childImageSharp.fluid
+      image: imageData.transmissionService.childImageSharp.fluid
     }, {
-      id: 6,
+      id: imageData.tuneUp.id,
       title: 'Tune Up',
       description: 'Preventative maintenance like changing your fluids, checking/replacing your battery, or changing your spark plugs is an easy way to keep your car from breaking down over time.  If you\'re in need of a tune up, give us a call or stop by today.',
-      image: imageData.cards.nodes[0].childImageSharp.fluid
+      image: imageData.tuneUp.childImageSharp.fluid
     }
   ];
 
@@ -126,7 +184,7 @@ const Services = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
-        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />

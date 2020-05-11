@@ -18,15 +18,15 @@ const About = () => {
 
   const imageData = useStaticQuery(graphql `
     query AboutImages {
-      hero: allFile(filter: {relativeDirectory: {
+      hero: file(relativeDirectory: {
         eq: "about/hero"
-      }}) {
-        nodes {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920,) {
-              ...GatsbyImageSharpFluid
-            }
+      }, name: {
+        eq: "hero"
+      }) {
+        id
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -37,7 +37,7 @@ const About = () => {
     <Layout>
       <SEO title="About" />
       <HeroBanner
-        heroImage={imageData.hero.nodes[0].childImageSharp.fluid}
+        heroImage={imageData.hero.childImageSharp.fluid}
         index={false}
         h1Text={h1Text}
         h2Text={false} />
