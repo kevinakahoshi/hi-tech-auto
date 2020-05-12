@@ -65,7 +65,7 @@ const Footer = () => (
             <p>
               <a
                 className="footer-nav-link"
-                href="+16264431788">
+                href="tel:+16264431788">
                 626-443-1788
               </a>
             </p>
