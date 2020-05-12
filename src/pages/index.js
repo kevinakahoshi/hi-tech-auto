@@ -240,7 +240,7 @@ const IndexPage = () => {
                   </h4>
                   <h5
                     className="text-center mb-0">
-                      Give us a call at <a href="tel:+16264481733" className="link">626-448-1733</a>
+                      Give us a call at <a href="tel:+16264431788" className="link">626-443-1788</a>
                   </h5>
                 </Col>
             </Row>
