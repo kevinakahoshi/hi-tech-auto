@@ -86,8 +86,14 @@ p {
   margin-bottom: 0;
 }
 
-.image-gallery-container:focus {
+.image-gallery-container:focus,
+.mobile-pill:focus {
   box-shadow: 0 0 0 0.2rem #f2544b80;
+  outline: 0;
+}
+
+.message-banner-button:focus {
+  box-shadow: 0 0 0 0.2rem #ffffff80;
   outline: 0;
 }
 

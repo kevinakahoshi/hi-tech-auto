@@ -36,6 +36,7 @@ const Header = () => {
                   <Logo />
               </Link>
               <NavbarToggler
+                className="mobile-pill"
                 onClick={toggle} />
               <Collapse
                 isOpen={isOpen}
@@ -46,6 +47,11 @@ const Header = () => {
                   <NavItem
                     className="my-2 my-md-0">
                     <Link
+                      onClick={() => {
+                        if (isOpen) {
+                          toggle()
+                        }
+                      }}
                       className="header-nav-link nav-links d-block"
                       to="/">
                         Home
@@ -54,6 +60,11 @@ const Header = () => {
                   <NavItem
                     className="my-2 my-md-0 ml-md-3">
                     <Link
+                      onClick={() => {
+                        if (isOpen) {
+                          toggle()
+                        }
+                      }}
                       className="header-nav-link nav-links d-block"
                       to="/about/">
                         About
@@ -62,6 +73,11 @@ const Header = () => {
                   <NavItem
                     className="my-2 my-md-0 ml-md-3">
                     <Link
+                      onClick={() => {
+                        if (isOpen) {
+                          toggle()
+                        }
+                      }}
                       className="header-nav-link nav-links d-block"
                       to="/services/">
                         Services
@@ -70,6 +86,11 @@ const Header = () => {
                   <NavItem
                     className="my-2 my-md-0 ml-md-3">
                     <Link
+                      onClick={() => {
+                        if (isOpen) {
+                          toggle()
+                        }
+                      }}
                       className="header-nav-link nav-links d-block"
                       to="/contact/">
                         Contact

@@ -47,7 +47,7 @@ const IndexPage = () => {
       }) {
         id
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1920, ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -59,7 +59,7 @@ const IndexPage = () => {
       }) {
         id
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 688) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -71,7 +71,7 @@ const IndexPage = () => {
       }) {
         id
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 688) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -83,7 +83,7 @@ const IndexPage = () => {
       }) {
         id
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 688) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -167,7 +167,7 @@ const IndexPage = () => {
                 <p>
                   Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
                   We have been open since 2001 and specialize in general automotive maintenance and repair.
-                  One thing that we emphasize is that because we're family owned, we treat all of our customers family.
+                  One thing that we emphasize is that because we're family owned, we treat all of our customers like family.
                   Whether you have a general question or are in need of a tune up, we'd love to hear from you!
                 </p>
                 <Link
