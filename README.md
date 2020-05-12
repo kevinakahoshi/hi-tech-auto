@@ -40,3 +40,4 @@ Hi-Tech Auto was built to serve as a way to provide information about my father-
 - https://hitechauto.us/
 
 ### Screenshot
+![home](https://user-images.githubusercontent.com/53406674/81630661-0f1dcc80-93bb-11ea-8ece-b1025e9989c9.png)
