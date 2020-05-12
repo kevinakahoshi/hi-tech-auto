@@ -28,8 +28,8 @@ const ImageCarousel = props => {
       return;
     }
     const nextIndex =
-      currentIndex === props.carouselImages.length - 1
-        ? 0
+      currentIndex === 0
+        ? props.carouselImages.length - 1
         : currentIndex - 1;
     setCurrentIndex(nextIndex);
   }
