@@ -65,8 +65,8 @@ const Footer = () => (
             <p>
               <a
                 className="footer-nav-link"
-                href="+16264481733">
-                626-448-1733
+                href="+16264431788">
+                626-443-1788
               </a>
             </p>
             <div

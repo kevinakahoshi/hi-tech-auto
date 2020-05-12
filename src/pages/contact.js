@@ -58,7 +58,7 @@ const Contact = () => {
                   <div
                     className="p-3 border rounded bg-light text-center mb-3">
                     <a
-                      href="tel:+16264481733"
+                      href="tel:+16264431788"
                       className="btn hi-tech-button w-100">
                         Give Us a Call
                     </a>
