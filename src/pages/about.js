@@ -54,7 +54,7 @@ const About = () => {
                 <p>
                   Hi-Tech Auto opened its doors in 2001 and has been serving the community for almost 20 years.
                   We are a family owned business and we strive to provide excellent service to each of our customers.
-                  Hi-Tech auto provides a variety of mechanic services from tune ups to transmission repair.
+                  Hi-Tech Auto provides a variety of mechanic services from tune ups to transmission repair.
                   We're proud to be able to serve our local community, and that many of our customers choose to help support us.
                   If you are ever in need of anything ranging from a simple tune up to transmission service, we are here to help.
                 </p>
