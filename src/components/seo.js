@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, meta, title, image }) {
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -12,6 +12,15 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+          }
+        }
+        file(relativeDirectory: {
+          eq: "home/hero"
+        }) {
+          childImageSharp {
+            fixed(width: 600) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
           }
         }
       }
@@ -39,6 +48,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: `https://hitechauto.us${file.childImageSharp.fixed.src}`
         },
         {
           property: `og:type`,

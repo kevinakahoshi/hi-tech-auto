@@ -30,7 +30,11 @@ const MessageBanner = (props) => {
           <div
             className="d-flex text-white h-100 justify-content-end">
             <svg
+              role="button"
+              tabIndex="0"
+              aria-label="Close Message Bar"
               onClick={props.closeBar}
+              onKeyPress={props.closeBar}
               className="bi bi-x t message-banner-button my-auto pointer"
               width="1rem"
               height="1rem"
