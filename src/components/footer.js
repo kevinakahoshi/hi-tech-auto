@@ -17,9 +17,10 @@ const Footer = () => (
         <Col
           lg={4}
           md={6}
-          xs={12}>
+          xs={12}
+          className="d-flex">
           <div
-            className="footer-boxes p-3 mb-3 mb-md-0 border rounded">
+            className="footer-boxes p-3 mb-3 border rounded w-100 align-items-stretch">
             <h5
               className="h4">
               Sitemap
@@ -90,9 +91,10 @@ const Footer = () => (
         <Col
           lg={4}
           md={6}
-          xs={12}>
+          xs={12}
+          className="d-flex">
           <div
-            className="footer-boxes p-3 mb-3 mb-lg-0 border rounded">
+            className="footer-boxes p-3 mb-3 mb-lg-0 border rounded w-100 align-items-stretch">
             <h5
               className="h4">
               Hours
