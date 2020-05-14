@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Simple static website for my father-in-law's mechanic shop.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kevin Akahoshi <kevin.akahoshi@gmail.com>",
   "dependencies": {
     "@react-google-maps/api": "^1.8.7",
     "bootstrap": "^4.4.1",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/kevinakahoshi/hi-tech-auto"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/kevinakahoshi/hi-tech-auto/issues"
   }
 }
