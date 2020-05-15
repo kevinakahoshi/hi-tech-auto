@@ -1,5 +1,5 @@
 # Hi-Tech Auto
-Hi-Tech Auto was built to serve as a way to provide information about my father-in-law's mechanic shop.  It is a static site generated using Gatsby.js.  Users can view:
+Hi-Tech Auto was built to serve as a way to provide information about a small independent mechanic shop.  It is a static site generated using Gatsby.js.  Users can view:
 - General information about the business
 - Services offered
 - Operating hours
