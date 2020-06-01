@@ -4,7 +4,7 @@ import Header from './header';
 import Footer from './footer';
 
 const MessageBannerWrapper = ({ children }) => {
-  const [closeMessageBanner, setCloseMessageBanner] = React.useState(false);
+  const [closeMessageBanner, setCloseMessageBanner] = React.useState(true);
 
   const closeBar = () => {
     setCloseMessageBanner(true);
