@@ -20,8 +20,9 @@ const MessageBannerWrapper = ({ children }) => {
         toggle={closeModal}
         centered={true}
         size="md"
-        className="tablet-modal-dialog">
-        <ModalBody className="position-relative p-3">
+        className="tablet-modal-dialog"
+      >
+        <ModalBody className="position-relative p-3" style={{ padding: '1rem' }}>
           <Button
             onClick={closeModal}
             className = "p-0 d-flex mr-0 ml-auto mb-3"
