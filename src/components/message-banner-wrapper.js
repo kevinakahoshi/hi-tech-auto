@@ -22,7 +22,7 @@ const MessageBannerWrapper = ({ children }) => {
         size="md"
         className="tablet-modal-dialog"
       >
-        <ModalBody className="position-relative p-3" style={{ padding: '1rem' }}>
+        <ModalBody className="position-relative p-3" style={{ padding: '1rem !important' }}>
           <Button
             onClick={closeModal}
             className = "p-0 d-flex mr-0 ml-auto mb-3"
