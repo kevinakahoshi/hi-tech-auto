@@ -145,106 +145,78 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Home" />
+      <SEO title="Home" />
       <HeroBanner
         heroImage={imageData.hero.childImageSharp.fluid}
         h1Text={h1Text}
         h2Text={h2Text}
-        index={true} />
-      <section
-        id="about"
-        className="bg-white">
-        <Container
-          className="py-5">
+        index={true}
+      />
+      <section id="about" className="bg-white">
+        <Container className="py-5">
           <Row>
-            <Col
-              xs={12}>
-                <h3
-                  className="h1">
-                  About Hi-Tech Auto
-                </h3>
-                <p>
-                  Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
-                  We have been open since 2001 and specialize in general automotive maintenance and repair.
-                  One thing that we emphasize is that because we're family owned, we treat all of our customers like family.
-                  Whether you have a general question or are in need of a tune up, we'd love to hear from you!
-                </p>
-                <Link
-                  className="btn hi-tech-button"
-                  to="/about/">
-                    More About Us
-                </Link>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section
-        id="services"
-        className="bg-light">
-        <Container
-          className="py-5">
-          <Row>
-            <Col
-              xs={12}>
-              <h3
-                className="h1">
-                Our Services
+            <Col xs={12}>
+              <h3 className="h1">
+                About Hi-Tech Auto
               </h3>
-            </Col>
-              {serviceCards}
-              <Col
-              xs={12}>
-                <Link
-                className="btn hi-tech-button"
-                to="/services/">
-                  See All Services
+              <p>
+                Hi-Tech Auto is a family-owned mechanic shop that is located in the heart of El Monte.
+                We have been open since 2001 and specialize in general automotive maintenance and repair.
+                One thing that we emphasize is that because we're family owned, we treat all of our customers like family.
+                Whether you have a general question or are in need of a tune up, we'd love to hear from you!
+              </p>
+              <Link className="btn hi-tech-button" to="/about/">
+                More About Us
               </Link>
             </Col>
           </Row>
         </Container>
       </section>
-      <section
-        id="gallery"
-        className="bg-white">
-        <Container
-          fluid
-          className="p-0">
-          <Row
-            noGutters={true}>
-              <Gallery
-                toggle={toggle}
-                galleryImages={imageData.gallery.nodes} />
-              <ImageModal
-                toggle={toggle}
-                modal={modal}
-                modalImage={modalImage} />
-              <div
-                className="d-block d-sm-none">
-                <ImageCarousel
-                  carouselImages={imageData.gallery.nodes} />
-              </div>
+      <section id="services" className="bg-light">
+        <Container className="py-5">
+          <Row>
+            <Col xs={12}>
+              <h3 className="h1">
+                Our Services
+              </h3>
+            </Col>
+            {serviceCards}
+            <Col xs={12}>
+              <Link className="btn hi-tech-button" to="/services/">
+                See All Services
+              </Link>
+            </Col>
           </Row>
         </Container>
       </section>
-      <section
-        id="contact"
-        className="bg-white py-5">
-          <Container>
-            <Row>
-              <Col
-                xs={12}>
-                  <h4
-                    className="h1 text-center">
-                      Have questions for us?
-                  </h4>
-                  <h5
-                    className="text-center mb-0">
-                      Give us a call at <a href="tel:+16264431788" className="link">626-443-1788</a>
-                  </h5>
-                </Col>
-            </Row>
-          </Container>
+      <section id="gallery" className="bg-white">
+        <Container fluid className="p-0">
+          <Row noGutters={true}>
+            <Gallery toggle={toggle} galleryImages={imageData.gallery.nodes} />
+            <ImageModal
+              toggle={toggle}
+              modal={modal}
+              modalImage={modalImage}
+            />
+            <div className="d-block d-sm-none">
+              <ImageCarousel carouselImages={imageData.gallery.nodes} />
+            </div>
+          </Row>
+        </Container>
+      </section>
+      <section id="contact" className="bg-white py-5">
+        <Container>
+          <Row>
+            <Col xs={12}>
+                <h4 className="h1 text-center">
+                  Have questions for us?
+                </h4>
+                <h5 className="text-center mb-0">
+                  Give us a call at <a href="tel:+16264431788" className="link">626-443-1788</a>
+                </h5>
+              </Col>
+          </Row>
+        </Container>
       </section>
     </Layout>
 )};

@@ -13,21 +13,21 @@ const FooterHours = () => (
         <p
           className="mb-3">Monday</p>
         <p
-          className="mb-3">8:30AM - 6:00PM</p>
+          className="mb-3">Closed</p>
       </div>
       <div
         className="d-flex justify-content-between">
         <p
           className="mb-3">Tuesday</p>
         <p
-          className="mb-3">8:30AM - 6:00PM</p>
+          className="mb-3">Closed</p>
       </div>
       <div
         className="d-flex justify-content-between">
         <p
           className="mb-3">Wednesday</p>
         <p
-          className="mb-3">8:30AM - 6:00PM</p>
+          className="mb-3">Closed</p>
       </div>
       <div
         className="d-flex justify-content-between">
@@ -41,21 +41,21 @@ const FooterHours = () => (
         <p
           className="mb-3">Friday</p>
         <p
-          className="mb-3">8:30AM - 6:00PM</p>
+          className="mb-3">Closed</p>
       </div>
       <div
         className="d-flex justify-content-between">
         <p
           className="mb-3">Saturday</p>
         <p
-          className="mb-3">9:00AM - 5:00PM</p>
+          className="mb-3">Closed</p>
       </div>
       <div
         className="d-flex justify-content-between">
         <p
           className="mb-0">Sunday</p>
         <p
-          className="mb-0">9:00AM - 5:00PM</p>
+          className="mb-0">Closed</p>
       </div>
     </div>
   </div>

@@ -12,88 +12,63 @@ import {
 } from 'reactstrap';
 
 import Logo from './logo';
+import MessageBanner from "./message-banner";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const handleClick = () => isOpen && toggle();
 
   return (
-    <header
-      className="sticky-top bg-white shadow-lg py-2 py-md-3">
-      <Container>
+    <header className="sticky-top bg-white shadow-lg">
+      <MessageBanner />
+      <Container className="py-3">
         <Row>
-          <Col
-            xs={12}>
-          <Navbar
-            className="p-0"
-            color="white"
-            light
-            expand="md">
+          <Col xs={12}>
+            <Navbar className="p-0" color="white" light expand="md">
               <Link
                 aria-label="Hi-Tech Auto Logo"
                 className="link nav-logo d-flex"
-                to="/">
-                  <Logo />
+                to="/"
+              >
+                <Logo />
               </Link>
-              <NavbarToggler
-                className="mobile-pill"
-                onClick={toggle} />
-              <Collapse
-                isOpen={isOpen}
-                navbar>
-                <Nav
-                  className="ml-auto"
-                  navbar>
-                  <NavItem
-                    className="my-2 my-md-0">
-                    <Link
-                      onClick={() => {
-                        if (isOpen) {
-                          toggle()
-                        }
-                      }}
+              <NavbarToggler className="mobile-pill" onClick={toggle} />
+              <Collapse isOpen={isOpen} navbar>
+                <Nav className="ml-auto" navbar>
+                  <NavItem className="my-2 my-md-0">
+                    <Link onClick={handleClick}
                       className="header-nav-link nav-links d-block"
-                      to="/">
-                        Home
+                      to="/"
+                    >
+                      Home
                     </Link>
                   </NavItem>
-                  <NavItem
-                    className="my-2 my-md-0 ml-md-3">
+                  <NavItem className="my-2 my-md-0 ml-md-3">
                     <Link
-                      onClick={() => {
-                        if (isOpen) {
-                          toggle()
-                        }
-                      }}
+                      onClick={handleClick}
                       className="header-nav-link nav-links d-block"
-                      to="/about/">
-                        About
+                      to="/about/"
+                    >
+                      About
                     </Link>
                   </NavItem>
-                  <NavItem
-                    className="my-2 my-md-0 ml-md-3">
+                  <NavItem className="my-2 my-md-0 ml-md-3">
                     <Link
-                      onClick={() => {
-                        if (isOpen) {
-                          toggle()
-                        }
-                      }}
+                      onClick={handleClick}
                       className="header-nav-link nav-links d-block"
-                      to="/services/">
-                        Services
+                      to="/services/"
+                    >
+                      Services
                     </Link>
                   </NavItem>
-                  <NavItem
-                    className="my-2 my-md-0 ml-md-3">
+                  <NavItem className="my-2 my-md-0 ml-md-3">
                     <Link
-                      onClick={() => {
-                        if (isOpen) {
-                          toggle()
-                        }
-                      }}
+                      onClick={handleClick}
                       className="header-nav-link nav-links d-block"
-                      to="/contact/">
-                        Contact
+                      to="/contact/"
+                    >
+                      Contact
                     </Link>
                   </NavItem>
                 </Nav>
